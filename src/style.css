@@ -4,6 +4,10 @@
 
 @tailwind utilities;
 
+html {
+    height: 100%;
+}
+
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -124,7 +128,7 @@
     background-color: #fff;
     -webkit-transform: translateY(-100%);
     transform: translateY(-100%);
-    transition: transform cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.5s !important;
+    transition: transform cubic-bezier(0.4, 0.01, 0.165, 0.99) 0.4s !important;
     z-index: 100;
 }
 
@@ -310,7 +314,6 @@ a.link-animation {
     position: relative;
     color: #000;
     display: inline-block;
-    opacity: 0.99;
 }
 
 
