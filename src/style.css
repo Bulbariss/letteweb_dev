@@ -34,9 +34,7 @@ canvas {
 
 /* Classes */
 
-.navbar-container {
-    max-width: 1280px;
-}
+
 
 .font-gilroy-extrabold {
     font-family: 'Gilroy ExtraBold', -apple-system,
@@ -62,6 +60,15 @@ canvas {
     user-select: none;
 }
 
+.w-fit {
+    width: fit-content;
+}
+
+.h-fit {
+    height: fit-content;
+}
+
+
 /* Classes */
 
 /* IDs */
@@ -74,6 +81,15 @@ canvas {
 
 #checkbox.checkbox {
     display: none;
+}
+
+#footer-container {
+    background-color: #1a202c;
+}
+
+#footer-container a:hover {
+    opacity: 0.6;
+    transition: all 0.2s;
 }
 
 #menuToggle .label {
@@ -246,6 +262,12 @@ canvas {
     width: 51.55px;
 }
 
+.max-w-80 {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* IDs */
 
 /* Kumya */
@@ -332,9 +354,9 @@ a.link-animation {
 #canvas {
     /* make the canvas wrapper fits the window */
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    /* top: 0; */
+    /* left: 0; */
+    width: 100vw;
     height: 100vh;
 }
 
@@ -510,10 +532,6 @@ a.link-animation {
 /* Rotaiting text */
 
 @media(max-width: 576px) {
-    .uk-navbar-nav.uk-nav-parent-icon {
-        display: none;
-    }
-
     #menu {
         display: flex;
     }
