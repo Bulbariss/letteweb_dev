@@ -28,7 +28,7 @@
                         class="noSelect">CONTACT</span></a>
                 <a id="toggle-lang-list" class="link-animation noSelect px-4 py-3"><span data-letters="EN">EN</span></a>
             </div>
-            <div class="flex hidden sm:flex flex-col absolute right-0 mr-6 lg:mr-10 text-sm font-extrabold invisible"
+            <div class="flex hidden sm:flex flex-col absolute right-0 mx-6 sm:mx-10 lg:mx-16 text-sm font-extrabold invisible"
                 id="lang-list">
                 <a href="#" class="link-animation noSelect px-4 py-3 "><span data-letters="LV">LV</span></a>
                 <a href="#" class="link-animation noSelect px-4 py-3"><span data-letters="RU">RU</span></a>
@@ -71,27 +71,31 @@
     </section>
 
     <section id="footer">
-        <div class="flex flex-wrap max-w-80 px-6 sm:px-10 lg:px-16 py-10 text-white" id="footer-container">
-            <div class="item w-full  font-bold pt-10 flex flex-col sm:flex-row">
+        <div class="flex flex-wrap max-w-80 px-6 sm:px-10 lg:px-16  pt-16 pb-10 sm:py-24 text-white"
+            id="footer-container">
+            <div class="item w-full  font-bold flex flex-col sm:flex-row">
                 <div class="w-full sm:w-full text-3xl pb-8 sm:pb-0">LETTEWEB</div>
                 <div class="w-full sm:w-full flex">
-                    <a href="#" class="my-auto text-xl font-normal">Get
+                    <a href="#" class="mb-auto text-xl font-normal">Get
                         in touch - Let's make it official.</a>
                 </div>
             </div>
             <div class="item w-full  font-bold pt-10  flex flex-col-reverse sm:flex-row">
-                <div class="w-full sm:w-full flex">
-                    <p class="h-fit mt-auto font-light">© 2019, Letteweb | <a href="#">Privacy Policy</a></p>
+                <div class="w-full sm:w-full flex flex-col-reverse">
+                    <p class="h-fit mt-auto font-light"><a href="privacy_policy.html">Privacy Policy</a> | <a
+                            id="btn-change-cookie-preferences" class="cursor-pointer">Cookie
+                            preferences</a></p>
+                    <p class="h-fit mt-auto font-light">© 2019, Letteweb </p>
                 </div>
                 <div class="w-full sm:w-full flex pb-16 sm:pb-0">
                     <div class="w-1/2 lg:w-4/12">
                         <p class="font-extrabold text-sm mb-2">Contacts</p>
-                        <a href="#" class="font-light block w-fit">Email</a>
+                        <a href="#" class="font-light block w-fit mb-1">Email</a>
                         <a href="#" class="font-light block w-fit">Whatsapp</a>
                     </div>
                     <div class="w-1/2 lg:w-4/12">
                         <p class="font-extrabold text-sm  mb-2">Follow us</p>
-                        <a href="#" class="font-light block w-fit">Instagram</a>
+                        <a href="#" class="font-light block w-fit mb-1">Instagram</a>
                         <a href="#" class="font-light block w-fit">Facebook</a>
                     </div>
                 </div>
@@ -193,6 +197,19 @@ void main() {
       gl_FragColor = texture2D(uSampler0, textureCoord);
   }
 </script>
+
+    <div id="cookie-banner" class="fixed bottom-0 w-full pb-2 px-4 hidden">
+        <div id="cookie-banner-container"
+            class="max-w-80 bg-gray-200 flex rounded-lg py-4 sm:py-2 items-center flex-col sm:flex-row px-4 w-fit">
+            <p class="h-fit text-gray-900">This website uses cookies to ensure you get the best experience on our
+                website. <a href="privacy_policy.html" class="text-gray-700 link-hover">Learn more</a></p>
+            <div class="sm:ml-16 flex mt-2 sm:mt-0">
+                <button id="btn-reject-cookies" class="btn-cc text-gray-900 link-hover">Decline</button>
+                <button id="btn-allow-cookies" class="btn-cc text-white bg-gray-900 ml-4 rounded-lg link-hover">Allow
+                    cookies</button>
+            </div>
+        </div>
+    </div>
     <!-- <script src="../node_modules/splitting/dist/splitting.min.js"></script> -->
     <!-- <script src="../node_modules/scroll-out/dist/scroll-out.min.js"></script> -->
     <script src="https://www.curtainsjs.com/build/curtains.min.js" type="text/javascript"></script>
