@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="../node_modules/splitting/dist/splitting.css">
+    <link rel="stylesheet" href="../node_modules/splitting/dist/splitting-cells.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body class="">
+    <section id="navbar" class="fixed w-full">
+        <div class="max-w-80 flex mx-auto h-full items-center px-6 sm:px-10 lg:px-16">
+            <div class="logo mr-auto w-auto h-auto">
+                <a class="font-extrabold text-2xl" href="index.html">LETTEWEB</a>
+            </div>
+            <div class="ml-auto w-auto h-auto text-sm font-extrabold hidden sm:flex">
+                <a href="projects.html" class="link-animation noSelect px-4 py-3"><span
+                        data-letters="PROJECTS">PROJECTS</span></a>
+                <a href="studio.html" class="link-animation noSelect px-4 py-3"><span
+                        data-letters="STUDIO">STUDIO</span></a>
+                <a href="contact.html" class="link-animation noSelect px-4 py-3"><span data-letters="CONTACT"
+                        class="noSelect">CONTACT</span></a>
+                <a id="toggle-lang-list" class="link-animation noSelect px-4 py-3"><span data-letters="EN">EN</span></a>
+            </div>
+            <div class="flex hidden sm:flex flex-col absolute right-0 mx-6 sm:mx-10 lg:mx-16 text-sm font-extrabold invisible"
+                id="lang-list">
+                <a href="#" class="link-animation noSelect px-4 py-3 "><span data-letters="LV">LV</span></a>
+                <a href="#" class="link-animation noSelect px-4 py-3"><span data-letters="RU">RU</span></a>
+            </div>
+            <div id="menuToggle" class="block sm:hidden">
+                <input type="checkbox" id="checkbox" class="checkbox">
+                <label for="checkbox" class="label"></label>
+            </div>
+    </section>
+    <ul id="menu">
+        <div id="menu-items" class="font-extrabold">
+            <li class="nav-list-item"><a href="projects.html" class="link-animation noSelect"><span
+                        data-letters="PROJECTS">PROJECTS</span></a></li>
+            <li class="nav-list-item"><a href="studio.html" class="link-animation noSelect"><span
+                        data-letters="STUDIO">STUDIO</span></a></li>
+            <li class="nav-list-item"><a href="contact.html" class="link-animation noSelect"><span
+                        data-letters="CONTACTS">CONTACTS</span></a></li>
+            <div class="flex items-center nav-list-item">
+                <li><a class="link-animation noSelect"><span data-letters="EN">EN</span></a>
+                </li>
+                <li><a href="#" class="link-animation noSelect text-gray-400"><span data-letters="LV"
+                            class="text-gray-400 text-4xl">LV</span></a>
+                </li>
+                <li><a href="#" class="link-animation noSelect"><span data-letters="RU"
+                            class="text-gray-400 text-4xl">RU</span></a>
+                </li>
+            </div>
+        </div>
+    </ul>
+
+
+    <section id="contact-page" class="min-h-screen flex">
+        <div id="content-page-container" class=" px-6 sm:px-10 lg:px-16 w-full py-32 h-fit my-auto">
+            <div id="form-container" class=" mx-auto">
+                <p class="text-3xl font-medium pb-4">Contact Us</p>
+                <form id="contact-form">
+                    <div class="flex flex-col sm:flex-row sm:pb-4">
+                        <div id="email-input" class="sm:w-6/12 w-full sm:pr-4">
+                            <label class="text-left block" for="input-email">Your Email</label>
+                            <input class="w-full mb-1 " type="text" placeholder="Your Email" id="input-email">
+                            <!-- <p id="input-email-p">Введите корректный адрес</p> -->
+                        </div>
+                        <div id="name-input" class="sm:w-6/12 w-full sm:pl-4">
+                            <label class="text-left block" for="input-name">Your Name</label>
+                            <input class="w-full d-flex mb-1" type="text" placeholder="Your Name" id="input-name">
+                            <!-- <p id="input-name-p">Введите имя</p> -->
+                        </div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row pb-4">
+                        <div id="phone-input" class="sm:w-6/12 w-full sm:pr-4">
+                            <label class="text-left block" for="input-phone">Subject</label>
+                            <input class="w-full d-flex mb-1" inputmode="numeric" type="text" placeholder="Subject"
+                                id="input-phone" pattern="^[0-9]+$"> <!-- /*pattern="[0-9]*"*/ -->
+                            <!-- <p id="input-phone-p">Введите номер</p> -->
+                        </div>
+                        <div id="find-input" class="sm:w-6/12 w-full sm:pl-4">
+                            <label class="text-left block" for="input-find">How did you find out about us?</label>
+                            <select class="w-full d-flex mb-1" for="input-find">
+                                <option id="disabled-option" value="" disabled="" selected="" hidden="">
+                                </option>
+                                <option value="Option 1">Recomendation</option>
+                                <option value="Option 2">Social media</option>
+                                <option value="Option 2">Ad</option>
+                                <option value="Option 3">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="message-input" class=" w-full pb-4">
+                        <label class="text-left block" for="input-message">Message</label>
+                        <textarea class="w-full " placeholder="Сообщение" id="input-message"></textarea>
+                        <!-- <p id="input-message-p">Введите сообщение</p> -->
+                    </div>
+                    <input class="btn-skeleton bg-gray-900 text-white text-xs w-full" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="footer">
+        <div class="flex flex-wrap max-w-80 px-6 sm:px-10 lg:px-16  pt-16 pb-10 sm:py-24 text-white"
+            id="footer-container">
+            <div class="item w-full  font-bold flex flex-col sm:flex-row">
+                <div class="w-full sm:w-full text-3xl pb-16 sm:pb-0">LETTEWEB</div>
+                <div class="w-full sm:w-full flex">
+                    <a href="contact.html" class="mb-auto text-xl font-normal">Get
+                        in touch - Let's make it official.</a>
+                </div>
+            </div>
+            <div class="item w-full  font-bold pt-10  flex flex-col-reverse sm:flex-row">
+                <div class="w-full sm:w-full flex flex-col-reverse">
+                    <p class="h-fit mt-2 font-light"><a href="privacy_policy.html">Privacy Policy</a> | <a
+                            id="btn-change-cookie-preferences" class="cursor-pointer">Cookie
+                            preferences</a></p>
+                    <p class="h-fit mt-auto font-light">© 2019, Letteweb </p>
+                </div>
+                <div class="w-full sm:w-full flex pb-12 sm:pb-0">
+                    <div class="w-1/2 lg:w-4/12">
+                        <p class="font-extrabold text-sm mb-2">Contacts</p>
+                        <a href="#" class="font-light block w-fit mb-2">Email</a>
+                        <a href="#" class="font-light block w-fit">Whatsapp</a>
+                    </div>
+                    <div class="w-1/2 lg:w-4/12">
+                        <p class="font-extrabold text-sm  mb-2">Follow us</p>
+                        <a href="#" class="font-light block w-fit mb-2">Instagram</a>
+                        <a href="#" class="font-light block w-fit">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div id="cookie-banner" class="fixed bottom-0 w-full pb-4 px-4 hidden">
+        <div id="cookie-banner-container"
+            class="max-w-80 bg-gray-200 flex rounded-lg py-4 sm:py-2 items-center flex-col sm:flex-row px-4 w-fit">
+            <p class="h-fit text-gray-900">This website uses cookies to ensure you get the best experience on our
+                website. <a href="privacy_policy.html" class="text-gray-700 link-hover">Learn more</a></p>
+            <div class="sm:ml-16 flex mt-2 sm:mt-0">
+                <button id="btn-reject-cookies" class="btn-cc text-gray-900 link-hover">Decline</button>
+                <button id="btn-allow-cookies" class="btn-cc text-white bg-gray-900 ml-4 rounded-lg link-hover">Allow
+                    cookies</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
