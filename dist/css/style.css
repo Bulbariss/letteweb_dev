@@ -11744,6 +11744,13 @@ canvas {
   margin-right: auto;
 }
 
+#contact-page {
+  background-image: url(../img/bg-3.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 /* IDs */
 
 /* Kumya */
@@ -12112,14 +12119,17 @@ label>.label-body {
 
 /* Rotaiting text */
 
-@media(max-width: 576px) {
-  #menu {
-    display: -webkit-box;
-    display: flex;
-  }
+@media(max-width: 640px) {
+  /* #menu {
+        display: flex;
+    } */
 
   .scroll-lock {
     overflow: hidden;
+  }
+
+  #contact-page {
+    background-image: url(../img/bg-mobile-2.svg);
   }
 }
 

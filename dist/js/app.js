@@ -93,13 +93,10 @@ window.onload = function () {
         let cookieConsent = getCookie('consent');
         if (cookieConsent === 'true') {
             activateCookies();
-            console.log('1')
         } else if (cookieConsent === 'false') {
             deactivateCookies();
-            console.log('2')
         } else {
             showCookieBanner();
-            console.log('3')
         }
     }
     // Get cookie value
