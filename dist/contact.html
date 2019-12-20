@@ -110,10 +110,14 @@
                         <textarea class="w-full " placeholder="Message" id="input-message"></textarea>
                         <p class="text-sm text-red-600 invisible" id="input-message-p">Enter message</p>
                     </div>
-                    <!-- <input class="btn-skeleton bg-gray-900 text-white text-xs w-full text-base" type="submit"value="Submit"> -->
-                    <button class="btn-skeleton bg-gray-900 text-white text-xs w-full text-base" type="submit">
-                        <!-- Submit -->
-                        <div class="lds-ring">
+                    <!-- <input class="btn-skeleton bg-gray-900 text-white text-xs w-full text-base" type="submit" -->
+                    <!-- value="Submit"> -->
+                    <button id="contact-submit-btn"
+                        class="btn-skeleton bg-gray-900 text-white w-full text-base  cursor-not-allowed" type="submit">
+                        <p class="text-base" id="contact-submit-btn-text">Submit</p>
+                        <p class="text-base hidden" id="contact-submit-btn-success">Message sent</p>
+                        <p class="text-base hidden" id="contact-submit-btn-error">Error, message not sent</p>
+                        <div class="lds-ring hidden mx-auto" id="form-spinner">
                             <div></div>
                             <div></div>
                             <div></div>

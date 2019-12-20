@@ -42,11 +42,7 @@ window.onload = function () {
         IDs.foundOutID.value = null;
         IDs.messageID.value = null;
     }
-    // Close modal by clicking on close button
-    // function closeModal() {
-    //   document.getElementById('close-modal').click();
-    // }
-    // If modal is closed clear inputs and remove invalid input property
+
     // Clear all invalid input properties
     function clearInvalidInput() {
         IDs.nameID.classList.remove('invalid-form');
@@ -71,13 +67,7 @@ window.onload = function () {
     //     }, 100);
     // }
 
-    // If enter is pressed call for email submit
-    function submitOnEnter(event) {
-        if (event.keyCode === 13) {
-            event.preventDefault();
-            submitEmail(event);
-        }
-    }
+
     // Check if cell input is valid
     function validateName() {
         let from_name = document.querySelector('#input-name').value;
@@ -120,7 +110,6 @@ window.onload = function () {
         } else {
             invalidInput('input-foundOut');
             foundOut = false;
-            console.log('!')
         }
     }
     // Check if cell input is valid
@@ -136,22 +125,42 @@ window.onload = function () {
     }
     // Show success message
     function showSuccess() {
-        document.getElementById('modal-body').classList.add('visibility-hidden');
-        document.getElementById('success').classList.remove('visibility-hidden');
-        clearInvalidInput();
-        clearForm();
+        document.getElementById('contact-submit-btn').classList.add('bg-green-500');
+        document.getElementById('contact-submit-btn').classList.add('pointer-events-none');
+        document.getElementById('contact-submit-btn').classList.add('select-none');
+        document.getElementById('contact-submit-btn').disabled = true;
+        document.getElementById('form-spinner').classList.remove('block-imp');
+        document.getElementById('form-spinner').classList.add('hidden');
+        document.getElementById('contact-submit-btn-success').classList.add('block-imp');
         setTimeout(() => {
-            // closeModal();
-            document.getElementById('modal-body').classList.remove('visibility-hidden');
-            document.getElementById('success').classList.add('visibility-hidden');
-        }, 6000);
+            document.getElementById('contact-submit-btn-success').classList.remove('block-imp');
+            document.getElementById('contact-submit-btn').classList.remove('bg-green-500');
+            document.getElementById('contact-submit-btn').classList.remove('select-none');
+            document.getElementById('contact-submit-btn-text').classList.remove('hidden');
+            document.getElementById('contact-submit-btn').classList.remove('pointer-events-none');
+            document.getElementById('contact-submit-btn').disabled = false;
+            clearInvalidInput();
+            clearForm();
+        }, 5000);
     }
     // Show error message
     function showError() {
-        document.getElementById('failure').classList.remove('visibility-hidden');
+        // show failure 
+        document.getElementById('contact-submit-btn').classList.add('bg-red-500');
+        document.getElementById('contact-submit-btn').classList.add('pointer-events-none');
+        document.getElementById('contact-submit-btn').classList.add('select-none');
+        document.getElementById('contact-submit-btn').disabled = true;
+        document.getElementById('form-spinner').classList.remove('block-imp');
+        document.getElementById('form-spinner').classList.add('hidden');
+        document.getElementById('contact-submit-btn-error').classList.add('block-imp');
         setTimeout(() => {
-            document.getElementById('failure').classList.add('visibility-hidden');
-        }, 4000);
+            document.getElementById('contact-submit-btn-error').classList.remove('block-imp');
+            document.getElementById('contact-submit-btn').classList.remove('bg-red-500');;
+            document.getElementById('contact-submit-btn').classList.remove('select-none');
+            document.getElementById('contact-submit-btn-text').classList.remove('hidden');
+            document.getElementById('contact-submit-btn').classList.remove('pointer-events-none');
+            document.getElementById('contact-submit-btn').disabled = false;
+        }, 5000);
     }
 
     // Send email
@@ -179,12 +188,15 @@ window.onload = function () {
 
         // Send email if everything is valid
         if (name && email && subject && foundOut && message) {
+            // add spinner
+            document.getElementById('contact-submit-btn-text').classList.add('hidden');
+            document.getElementById('form-spinner').classList.add('block-imp');
+
             emailjs.send(data.service_id, data.template_id, data.template_params)
                 .then(function (response) {
-                    console.log('SUCCESS!', response.status, response.text);
-
+                    showSuccess();
                 }, function (error) {
-                    console.log('FAILED...', error);
+                    showError();
                 });
         }
     }
@@ -344,15 +356,9 @@ window.onload = function () {
     IDs.subjectID.addEventListener('focusout', validateSubject);
     IDs.foundOutID.addEventListener('focusout', validateFoundOut);
     IDs.messageID.addEventListener('focusout', validateMessage);
-    // When modal button is pressed hide navbar on phones
-    // document.getElementById('btn-trigger-modal').addEventListener('click', hideNavbar);
-
-    // When modal closes show navbar on mobile and clear fields
-    // document.getElementById('ModalCenter').addEventListener('click', closedModal);
     // Send email on submit
     document.getElementById('contact-form').addEventListener('submit', submitEmail);
     // Submit on enter press
-    document.addEventListener('keyup', submitOnEnter(event));
 
     document.getElementById('btn-allow-cookies').addEventListener('click', () => {
         allowCookies();
