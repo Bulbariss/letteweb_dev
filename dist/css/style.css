@@ -11709,6 +11709,7 @@ canvas {
 
 #form-container {
   max-width: 700px;
+  background-color: #fafafa;
 }
 
 #lang-toggle {

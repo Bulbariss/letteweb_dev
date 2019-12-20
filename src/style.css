@@ -275,6 +275,7 @@ canvas {
 
 #form-container {
     max-width: 700px;
+    background-color: #fbfbfb;
 }
 
 #lang-toggle {
