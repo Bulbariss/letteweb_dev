@@ -11643,11 +11643,6 @@ canvas {
   height: fit-content;
 }
 
-.blob {
-  height: 70vh;
-  min-height: 300px;
-}
-
 .color-invert {
   -webkit-filter: invert(1);
           filter: invert(1);
@@ -11893,8 +11888,7 @@ canvas {
 }
 
 .parallax>use {
-  -webkit-animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
-          animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+  /* animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite; */
 }
 
 .parallax>use:nth-child(1) {
@@ -12028,7 +12022,218 @@ canvas {
   background-size: cover;
 }
 
+#blob-top {
+  height: 70vh;
+  min-height: 300px;
+}
+
+#blob-bottom {
+  height: 80vh;
+  bottom: -20%;
+  min-height: 300px;
+}
+
 /* IDs */
+
+/* Fade In Up */
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Fade In Up */
+
+/* Glitch Text */
+
+p.glitch-text[data-scroll='in'] [data-char]:after {
+  -webkit-animation-name: glitch-switch;
+          animation-name: glitch-switch;
+}
+
+.reveal--0 [data-char]:after {
+  -webkit-animation-iteration-count: calc(var(--char-index) * 0.55);
+          animation-iteration-count: calc(var(--char-index) * 0.55);
+}
+
+p.glitch-text:nth-of-type(1) {
+  position: absolute;
+  opacity: 0;
+  -webkit-animation-name: glitch-switch;
+          animation-name: glitch-switch;
+}
+
+.word {
+  position: relative;
+  display: inline-block;
+}
+
+[data-char] {
+  color: transparent;
+  position: relative;
+}
+
+[data-char]:after {
+  --txt: attr(data-char);
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-timing-function: steps(1);
+          animation-timing-function: steps(1);
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  content: var(--txt);
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/**
+ * Themeing
+*/
+
+/* .page {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    position: relative;
+    scroll-snap-align: center;
+} */
+
+@-webkit-keyframes glitch-switch {
+  0% {
+    content: var(--char-0);
+  }
+
+  10% {
+    content: var(--char-1);
+  }
+
+  20% {
+    content: var(--char-2);
+  }
+
+  30% {
+    content: var(--char-3);
+  }
+
+  40% {
+    content: var(--char-4);
+  }
+
+  50% {
+    content: var(--char-5);
+  }
+
+  60% {
+    content: var(--char-6);
+  }
+
+  70% {
+    content: var(--char-7);
+  }
+
+  80% {
+    content: var(--char-8);
+  }
+
+  90% {
+    content: var(--char-9);
+  }
+
+  100% {
+    content: var(--char-0);
+  }
+}
+
+@keyframes glitch-switch {
+  0% {
+    content: var(--char-0);
+  }
+
+  10% {
+    content: var(--char-1);
+  }
+
+  20% {
+    content: var(--char-2);
+  }
+
+  30% {
+    content: var(--char-3);
+  }
+
+  40% {
+    content: var(--char-4);
+  }
+
+  50% {
+    content: var(--char-5);
+  }
+
+  60% {
+    content: var(--char-6);
+  }
+
+  70% {
+    content: var(--char-7);
+  }
+
+  80% {
+    content: var(--char-8);
+  }
+
+  90% {
+    content: var(--char-9);
+  }
+
+  100% {
+    content: var(--char-0);
+  }
+}
+
+/* Glitch Text */
 
 /* Kumya */
 
@@ -12472,8 +12677,13 @@ label>.label-body {
     background-image: url(../img/bg-mobile-2.svg);
   }
 
-  .blob {
+  #blob-top {
     height: 50vh;
+  }
+
+  #blob-bottom {
+    height: 50vh;
+    bottom: -8%;
   }
 }
 

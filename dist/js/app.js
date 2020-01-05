@@ -10,6 +10,16 @@ window.onload = function () {
     let foundOut = false;
     let message = false;
 
+    // Glitch text
+    let _window = window;
+    let Splitting = _window.Splitting;
+    let results = Splitting();
+    let glitches = '`¡™£¢∞§¶•ªº–≠åß∂ƒ©˙∆˚¬…æ≈ç√∫˜µ≤≥÷/?░▒▓<>/'.split('');
+
+
+    // Animated point
+    let pointAnimate = document.querySelector('.point');
+
     // Get elements in form
     const IDs = {
         nameID: document.getElementById('input-name'),
@@ -202,6 +212,18 @@ window.onload = function () {
         }
     }
 
+    function initGlitchText() {
+        for (let r = 0; r < results.length; r++) {
+            let chars = results[r].chars;
+            for (let c = 0; c < chars.length; c++) {
+                chars[c].style.setProperty('--count', Math.random() * 5 + 1);
+                for (let g = 0; g < 10; g++) {
+                    chars[c].style.setProperty('--char-' + g, '"' + glitches[Math.floor(Math.random() * glitches.length)] + '"');
+                }
+            }
+        }
+    }
+
     function curtainsJS() {
         let mousePosition = {
             x: 0,
@@ -302,11 +324,11 @@ window.onload = function () {
 
     // Get cookie value
     function getCookie(cname) {
-        var name = cname + "=";
-        var decodedCookie = decodeURIComponent(document.cookie);
-        var ca = decodedCookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
             while (c.charAt(0) == ' ') {
                 c = c.substring(1);
             }
@@ -346,9 +368,9 @@ window.onload = function () {
 
     // Create cookie that lives 365 days
     function setCookie(cname, cvalue, exdays) {
-        var d = new Date();
+        let d = new Date();
         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-        var expires = "expires=" + d.toUTCString();
+        let expires = "expires=" + d.toUTCString();
         document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     };
 
@@ -405,6 +427,17 @@ window.onload = function () {
         Splitting({
             by: 'chars',
             whitespace: true
+        });
+        ScrollOut({
+            once: true,
+            onShown(el) {
+                el.classList.add("fadeInUp");
+            }
+        });
+        initGlitchText();
+        window.ScrollOut({
+            // scrollingElement: '.container',
+            targets: '.glitch-text',
         });
         initCookies();
     })();
