@@ -233,6 +233,7 @@ canvas {
 
 .blob {
     height: 70vh;
+    min-height: 300px;
 }
 
 .color-invert {
@@ -268,10 +269,6 @@ canvas {
 
 #form-container .border-red {
     border-color: #f56565;
-}
-
-#cookie-banner {
-    /* display: none; */
 }
 
 #checkbox.checkbox {
@@ -963,5 +960,9 @@ label>.label-body {
 
     #contact-page {
         background-image: url(../img/bg-mobile-2.svg);
+    }
+
+    .blob {
+        height: 50vh;
     }
 }
