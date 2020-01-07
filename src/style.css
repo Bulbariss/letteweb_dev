@@ -370,7 +370,7 @@ canvas {
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
     transition: opacity 0.2s ease,
-        transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+        transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
         color 0.2s ease;
 }
 
@@ -593,6 +593,29 @@ canvas {
     }
 }
 
+.revealFadeUp.showFadeUp {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+.revealFadeUp {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+    transform: translateY(60px);
+    -webkit-transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        -webkit-transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        -webkit-transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        -webkit-transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
 .fadeInUp {
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
@@ -600,60 +623,63 @@ canvas {
     animation-delay: 0s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Fade In Up */
 
 /* Glitch Text */
+#glitch-text-container {
+    transition: color 0.25s ease;
+}
 
-p.glitch-text[data-scroll='in'] [data-char]:after {
+
+#glitch-text-container .glitch-text [data-scroll='in'] [data-char]:after {
     animation-name: glitch-switch;
 }
 
-.reveal--0 [data-char]:after {
-    animation-iteration-count: calc(var(--char-index) * 0.55);¡
+/* One by one */
+#glitch-text-container .reveal--0 [data-char]:after {
+    animation-iteration-count: calc(var(--char-index) * 0.55);
 }
 
-p.glitch-text:nth-of-type(1) {
+/* At the same time */
+#glitch-text-container .reveal--1 [data-char]:after {
+    animation-iteration-count: 4;
+}
+
+/* Random */
+#glitch-text-container .glitch-text [data-char]:after {
+    animation-iteration-count: var(--count);
+}
+
+#glitch-text-container .glitch-text-sample {
     position: absolute;
     opacity: 0;
 }
 
-.word {
+#glitch-text-container .word {
     position: relative;
     display: inline-block;
 }
 
-[data-char] {
+#glitch-text-container [data-char] {
     color: transparent;
     position: relative;
 }
 
-[data-char]:after {
+#glitch-text-container [data-char]:after {
     --txt: attr(data-char);
     animation-duration: 0.2s;
     animation-delay: 0.5s;
     animation-timing-function: steps(1);
     animation-fill-mode: backwards;
     content: var(--txt);
-    color: #333;
+    color: #000;
     position: absolute;
     left: 0;
     top: 0;
 }
-
-/**
- * Themeing
-*/
-/* .page {
-    align-items: center;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    position: relative;
-    scroll-snap-align: center;
-} */
 
 @-moz-keyframes glitch-switch {
     0% {
@@ -968,7 +994,7 @@ a.link-animation {
 /* Kumya */
 
 /* Cascading text effect */
-.char {
+/* .char {
     display: inline-block;
     animation-delay: calc(0.25s + var(--char-index) * 0.1s);
     transition: all 0.25s calc(0.25s + var(--char-index) * 0.1s);
@@ -1058,7 +1084,7 @@ a.link-animation {
     100% {
         transform: translate(110%, 0);
     }
-}
+} */
 
 /* Cascading text effect */
 

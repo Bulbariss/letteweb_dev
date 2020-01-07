@@ -11,11 +11,8 @@ window.onload = function () {
     let message = false;
 
     // Glitch text
-    let _window = window;
-    let Splitting = _window.Splitting;
-    let results = Splitting();
+    let results;
     let glitches = '`¡™£¢∞§¶•ªº–≠åß∂ƒ©˙∆˚¬…æ≈ç√∫˜µ≤≥÷/?░▒▓<>/'.split('');
-
 
     // Animated point
     let pointAnimate = document.querySelector('.point');
@@ -212,18 +209,6 @@ window.onload = function () {
         }
     }
 
-    function initGlitchText() {
-        for (let r = 0; r < results.length; r++) {
-            let chars = results[r].chars;
-            for (let c = 0; c < chars.length; c++) {
-                chars[c].style.setProperty('--count', Math.random() * 5 + 1);
-                for (let g = 0; g < 10; g++) {
-                    chars[c].style.setProperty('--char-' + g, '"' + glitches[Math.floor(Math.random() * glitches.length)] + '"');
-                }
-            }
-        }
-    }
-
     function curtainsJS() {
         let mousePosition = {
             x: 0,
@@ -413,6 +398,18 @@ window.onload = function () {
         document.getElementById('lang-list').classList.toggle('invisible');
     };
 
+    function glitchText() {
+        for (let r = 0; r < results.length; r++) {
+            let chars = results[r].chars;
+            for (let c = 0; c < chars.length; c++) {
+                chars[c].style.setProperty('--count', Math.random() * 5 + 1);
+                for (let g = 0; g < 10; g++) {
+                    chars[c].style.setProperty('--char-' + g, '"' + glitches[Math.floor(Math.random() * glitches.length)] + '"');
+                }
+            }
+        }
+    };
+
     document.getElementById('checkbox').addEventListener('click', toggleNav);
     window.addEventListener('resize', disableNav);
     document.getElementById('toggle-lang-list').addEventListener('click', toggleLangList);
@@ -430,14 +427,18 @@ window.onload = function () {
         });
         ScrollOut({
             once: true,
+            targets: '.revealFadeUp',
             onShown(el) {
-                el.classList.add("fadeInUp");
+                el.classList.add("showFadeUp");
             }
         });
-        initGlitchText();
-        window.ScrollOut({
-            // scrollingElement: '.container',
+        ScrollOut({
+            once: true,
             targets: '.glitch-text',
+            onShown: function (el) {
+                results = Splitting();
+                glitchText();
+            },
         });
         initCookies();
     })();
