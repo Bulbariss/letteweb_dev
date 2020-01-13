@@ -414,9 +414,68 @@ window.onload = function () {
     window.addEventListener('resize', disableNav);
     document.getElementById('toggle-lang-list').addEventListener('click', toggleLangList);
 
+    // Mooving letters
+    function moovingLetters() {
+        const textWrapper = document.querySelector('#mooving-letters');
+        let iteration = 0;
+        let finalStrings = [];
+        let glitchesString = '';
+        let numberOfIterations = [];
+        let nume = -1;
+        let letters = textWrapper.innerText.replace(/\s/g, "");
+        textWrapper.innerHTML = textWrapper.innerHTML.replace(/<span class="char" data-char="(\S|)" style="--char-index:(\S*|);">(\S|)<\/span>/g, '<span class="char" data-char="$1" data-value=" " style="--char-index:$2;">$3</span>');
+
+        function getNumOfIterations() {
+            for (let i = 0; i < letters.length; i++) {
+                glitchesString = '';
+                for (let j = 0; j < (Math.floor(((Math.random() * 5) + 1) * 7)); j++) {
+                    glitchesString += Math.floor((Math.random() * 41) + 1) + ',';
+                };
+                numberOfIterations[i] = glitchesString;
+                while ((numberOfIterations[i].split(',').length) < 50) {
+                    numberOfIterations[i] += '0,';
+                };
+                numberOfIterations[i] += '0';
+            };
+        }
+
+        function getFinalStrings() {
+            for (let i = 0; i < 50; i++) {
+                let testString = '';
+                for (let j = 0; j < letters.length; j++) {
+                    testString += numberOfIterations[j].split(',')[i] + ',';
+                }
+                finalStrings[i] = testString;
+            }
+            textWrapper.innerHTML = textWrapper.innerHTML.replace(/class="char"/g, 'class="char sym-43"');
+            textWrapper.innerHTML = textWrapper.innerHTML.replace(/sym-\d?\d/g, replaceFinal)
+        }
+
+        function replaceFinal() {
+            nume++;
+            return finalStrings[iteration].split(',')[nume].replace(/\d?\d/g, 'sym-$&');
+        }
+
+        function swapText() {
+            nume = -1;
+            if (iteration < finalStrings.length) {
+                textWrapper.innerHTML = textWrapper.innerHTML.replace(/sym-\d?\d/g, replaceFinal)
+                iteration++;
+            }
+        }
+
+        getNumOfIterations();
+        getFinalStrings();
+        setTimeout(() => {
+            setInterval(swapText, 55);
+        }, 800);
+    }
+
+    // Mooving letters
+
+
     (function () {
         // curtainsJS();
-        Splitting();
         ScrollOut({
             once: false,
             targets: '.word',
@@ -434,12 +493,13 @@ window.onload = function () {
         });
         ScrollOut({
             once: true,
-            targets: '.glitch-text',
+            targets: '#mooving-letters',
             onShown: function (el) {
-                results = Splitting();
-                glitchText();
+                moovingLetters();
             },
         });
         initCookies();
+        // moovingLetters();
+        glitchText();
     })();
 }
