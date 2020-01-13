@@ -428,7 +428,7 @@ window.onload = function () {
         function getNumOfIterations() {
             for (let i = 0; i < letters.length; i++) {
                 glitchesString = '';
-                for (let j = 0; j < (Math.floor(((Math.random() * 5) + 1) * 7)); j++) {
+                for (let j = 0; j < (Math.floor(((Math.random() * 4) + 2) * 8)); j++) {
                     glitchesString += Math.floor((Math.random() * 41) + 1) + ',';
                 };
                 numberOfIterations[i] = glitchesString;
@@ -467,7 +467,7 @@ window.onload = function () {
         getNumOfIterations();
         getFinalStrings();
         setTimeout(() => {
-            setInterval(swapText, 55);
+            setInterval(swapText, 65);
         }, 800);
     }
 
