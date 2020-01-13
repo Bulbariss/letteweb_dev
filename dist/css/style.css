@@ -12073,8 +12073,8 @@ canvas {
   transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
         opacity 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
         -webkit-transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  -webkit-transition-delay: 0.4s;
-  transition-delay: 0.4s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
 .fadeInUp {
@@ -12082,8 +12082,8 @@ canvas {
   animation-name: fadeInUp;
   -webkit-animation-duration: 1.5s;
           animation-duration: 1.5s;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
