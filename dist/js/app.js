@@ -428,11 +428,11 @@ window.onload = function () {
         function getNumOfIterations() {
             for (let i = 0; i < letters.length; i++) {
                 glitchesString = '';
-                for (let j = 0; j < (Math.floor(((Math.random() * 4) + 2) * 8)); j++) {
+                for (let j = 0; j < (Math.floor(((Math.random() * 4) + 2) * 9)); j++) {
                     glitchesString += Math.floor((Math.random() * 41) + 1) + ',';
                 };
                 numberOfIterations[i] = glitchesString;
-                while ((numberOfIterations[i].split(',').length) < 50) {
+                while ((numberOfIterations[i].split(',').length) < 55) {
                     numberOfIterations[i] += '0,';
                 };
                 numberOfIterations[i] += '0';
@@ -440,7 +440,7 @@ window.onload = function () {
         }
 
         function getFinalStrings() {
-            for (let i = 0; i < 50; i++) {
+            for (let i = 0; i < 55; i++) {
                 let testString = '';
                 for (let j = 0; j < letters.length; j++) {
                     testString += numberOfIterations[j].split(',')[i] + ',';
@@ -467,7 +467,7 @@ window.onload = function () {
         getNumOfIterations();
         getFinalStrings();
         setTimeout(() => {
-            setInterval(swapText, 65);
+            setInterval(swapText, 60);
         }, 800);
     }
 
@@ -500,6 +500,6 @@ window.onload = function () {
         });
         initCookies();
         // moovingLetters();
-        glitchText();
+        // glitchText();
     })();
 }
