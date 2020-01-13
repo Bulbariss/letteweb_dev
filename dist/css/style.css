@@ -11632,6 +11632,14 @@ canvas {
   height: fit-content;
 }
 
+.let-space-3 {
+  letter-spacing: -3px;
+}
+
+.let-space-5 {
+  letter-spacing: -5px;
+}
+
 .color-invert {
   -webkit-filter: invert(1);
           filter: invert(1);
