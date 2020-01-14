@@ -12013,7 +12013,7 @@ canvas {
 }
 
 #contact-page {
-  background-image: url(../img/bg-3.svg);
+  background-image: url(../img/test5.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -12678,10 +12678,6 @@ label>.label-body {
 
   .scroll-lock {
     overflow: hidden;
-  }
-
-  #contact-page {
-    background-image: url(../img/bg-mobile-2.svg);
   }
 
   #blob-top {

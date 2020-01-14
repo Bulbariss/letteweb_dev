@@ -220,11 +220,11 @@ canvas {
 }
 
 .let-space-3 {
-letter-spacing: -3px;
+    letter-spacing: -3px;
 }
 
 .let-space-5 {
-letter-spacing: -5px;
+    letter-spacing: -5px;
 }
 
 .color-invert {
@@ -541,7 +541,7 @@ letter-spacing: -5px;
 }
 
 #contact-page {
-    background-image: url(../img/bg-3.svg);
+    background-image: url(../img/test5.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1179,10 +1179,6 @@ label>.label-body {
 
     .scroll-lock {
         overflow: hidden;
-    }
-
-    #contact-page {
-        background-image: url(../img/bg-mobile-2.svg);
     }
 
     #blob-top {
