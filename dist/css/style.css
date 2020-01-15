@@ -11429,6 +11429,37 @@ canvas {
   text-rendering: optimizeLegibility
 }
 
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #333;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  color: #333;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  color: #333;
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  color: #333;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #333;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #333;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #333;
+}
+
 ::-moz-selection {
   background: #000;
   color: #fff;
@@ -11665,6 +11696,20 @@ canvas {
 /* Classes */
 
 /* IDs */
+
+#hero {
+  background-image: url(../img/bg-main.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#studio-hero {
+  background-image: url(../img/bg-studio.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 /* Menu toggle */
 
@@ -11966,11 +12011,6 @@ canvas {
   z-index: 1000;
 }
 
-#form-container {
-  max-width: 700px;
-  background-color: #fbfbfb;
-}
-
 #lang-toggle {
   padding: 0;
   text-align: center;
@@ -12117,7 +12157,7 @@ canvas {
 
 #mooving-letters span.sym-0,
 #mooving-letters-invisible span.sym-0 {
-  color: #000;
+  color: #333;
 }
 
 #mooving-letters span.char::after,
@@ -12125,7 +12165,7 @@ canvas {
   position: absolute;
   left: 0;
   top: -15%;
-  color: #000;
+  color: #333;
 }
 
 #mooving-letters span.sym-0::after {

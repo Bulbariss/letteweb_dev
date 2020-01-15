@@ -62,47 +62,53 @@
     </ul>
 
 
-    <section id="contact-page" class="min-h-screen flex text-muted-black">
-        <div id="content-page-container" class=" px-6 sm:px-10 lg:px-16 w-full py-20 h-fit  my-auto">
-            <div id="form-container" class=" mx-auto p-4 sm:p-6 rounded-lg">
-                <p class="text-3xl TTNormsPro-Bold pb-4">Contact Us</p>
+    <section id="contact-page" class="min-h-screen flex text-muted-black justify-center">
+        <div id="content-page-container"
+            class="self-center flex flex-col sm:flex-row bg-gray-100 rounded-lg max-w-80 mx-6 sm:mx-10 lg:mx-16">
+            <div class="p-4 sm:p-6 relative max-w-lg w-full">
+                <h1 class="text-4xl TTNormsPro-Medium">We'll be glad to hear from you.</h1>
+                <div class="absolute bottom-0 pb-4 sm:pb-6">
+                    <p class="TTNormsPro-Bold mb-2 text-lg">Email</p>
+                    <p class="mb-6">work@letteweb.lv</p>
+                    <p class="TTNormsPro-Bold mb-2 text-lg">Socials</p>
+                    <p class="mb-1">Facebook</p>
+                    <p class="">Instagram</p>
+                </div>
+            </div>
+            <div id="form-container" class="p-4 sm:p-6 max-w-lg w-full">
+                <!-- <p class="text-3xl TTNormsPro-Bold pb-4">Contact Us</p> -->
                 <form id="contact-form">
-                    <div class="flex flex-col sm:flex-row sm:pb-1">
-                        <div id="email-input" class="sm:w-6/12 w-full sm:pr-4 sm:pb-0">
-                            <label class="text-left block" for="input-email">Your Email</label>
-                            <input class="w-full mb-1 " type="text" placeholder="Your Email" id="input-email">
-                            <p class="text-sm text-red-600 invisible" id="input-email-p">Enter valid email</p>
-                        </div>
-                        <div id="name-input" class="sm:w-6/12 w-full sm:pl-4 sm:pb-0">
-                            <label class="text-left block" for="input-name">Your Name</label>
-                            <input class="w-full d-flex mb-1" type="text" placeholder="Your Name" id="input-name">
-                            <p class="text-sm text-red-600 invisible" id="input-name-p">Enter valid name</p>
-                        </div>
+                    <div id="email-input" class="w-full  sm:pb-0">
+                        <!-- <label class="text-left block" for="input-email">Your Email</label> -->
+                        <input class="w-full mb-1 " type="text" placeholder="Your Email" id="input-email">
+                        <p class="text-sm text-red-600 invisible" id="input-email-p">Enter valid email</p>
                     </div>
-                    <div class="flex flex-col sm:flex-row pb-1">
-                        <div id="subject-input" class="sm:w-6/12 w-full sm:pr-4 sm:pb-0 pb-2">
-                            <label class="text-left block" for="input-subject">Subject</label>
-                            <input class="w-full d-flex mb-1" type="text" placeholder="Subject" id="input-subject">
-                            <!-- /*pattern="[0-9]*"*/ -->
-                            <p class="text-sm text-red-600 invisible" id="input-subject-p">Enter subject</p>
-                        </div>
-                        <div id="foundOut-input" class="sm:w-6/12 w-full sm:pl-4 sm:pb-0 pb-2">
-                            <label class="text-left block" for="input-foundOut">How did you find out about
-                                us?</label>
-                            <select class="w-full d-flex mb-1" for="input-foundOut" id="input-foundOut">
-                                <option id="disabled-option" value="" disabled="" selected="" hidden="">
-                                </option>
-                                <option value="Recomendation">Recomendation</option>
-                                <option value="Social media">Social media</option>
-                                <option value="Ad">Ad</option>
-                                <option value="Ad">Search engine</option>
-                                <option value="Other">Other</option>
-                            </select>
-                            <p class="text-sm text-red-600 invisible" id="input-foundOut-p">Choose answer</p>
-                        </div>
+                    <div id="name-input" class=" w-full  sm:pb-0">
+                        <!-- <label class="text-left block" for="input-name">Your Name</label> -->
+                        <input class="w-full d-flex mb-1" type="text" placeholder="Your Name" id="input-name">
+                        <p class="text-sm text-red-600 invisible" id="input-name-p">Enter valid name</p>
                     </div>
-                    <div id="message-input" class=" w-full pb-4">
-                        <label class="text-left block" for="input-message">Message</label>
+                    <div id="subject-input" class=" w-full sm:pb-0 pb-2">
+                        <!-- <label class="text-left block" for="input-subject">Subject</label> -->
+                        <input class="w-full d-flex mb-1" type="text" placeholder="Subject" id="input-subject">
+                        <p class="text-sm text-red-600 invisible" id="input-subject-p">Enter subject</p>
+                    </div>
+                    <!-- <div id="foundOut-input" class="sm:w-6/12 w-full sm:pl-4 sm:pb-0 pb-2">
+                        <label class="text-left block" for="input-foundOut">How did you find out about
+                            us?</label>
+                        <select class="w-full d-flex mb-1" for="input-foundOut" id="input-foundOut">
+                            <option id="disabled-option" value="" disabled="" selected="" hidden="">
+                            </option>
+                            <option value="Recomendation">Recomendation</option>
+                            <option value="Social media">Social media</option>
+                            <option value="Ad">Ad</option>
+                            <option value="Ad">Search engine</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <p class="text-sm text-red-600 invisible" id="input-foundOut-p">Choose answer</p>
+                    </div> -->
+                    <div id="message-input" class=" w-full ">
+                        <!-- <label class="text-left block" for="input-message">Message</label> -->
                         <textarea class="w-full " placeholder="Message" id="input-message"></textarea>
                         <p class="text-sm text-red-600 invisible" id="input-message-p">Enter message</p>
                     </div>
