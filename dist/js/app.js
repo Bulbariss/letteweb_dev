@@ -7,12 +7,9 @@ window.onload = function () {
     let name = false;
     let email = false;
     let subject = false;
-    let foundOut = false;
+    // let foundOut = false;
     let message = false;
 
-    // Glitch text
-    let results;
-    let glitches = '`¡™£¢∞§¶•ªº–≠åß∂ƒ©˙∆˚¬…æ≈ç√∫˜µ≤≥÷/?░▒▓<>/'.split('');
 
     // Animated point
     let pointAnimate = document.querySelector('.point');
@@ -107,16 +104,16 @@ window.onload = function () {
     }
 
     // Check if cell input is valid
-    function validateFoundOut() {
-        let x = document.querySelector('#input-foundOut').value;
-        if (x) {
-            validInput('input-foundOut');
-            foundOut = true;
-        } else {
-            invalidInput('input-foundOut');
-            foundOut = false;
-        }
-    };
+    // function validateFoundOut() {
+    //     let x = document.querySelector('#input-foundOut').value;
+    //     if (x) {
+    //         validInput('input-foundOut');
+    //         foundOut = true;
+    //     } else {
+    //         invalidInput('input-foundOut');
+    //         foundOut = false;
+    //     }
+    // };
 
     // Check if cell input is valid
     function validateMessage() {
@@ -178,24 +175,27 @@ window.onload = function () {
         validateName();
         validateEmail();
         validateSubject();
-        validateFoundOut();
+        // validateFoundOut();
         validateMessage();
 
-        const data = {
-            service_id: 'default_service',
-            template_id: 'template_GUD945DV',
-            user_id: 'user_6lWJz8Dg5i8zIDgfKxhsy',
-            template_params: {
-                "from_name": IDs.nameID.value,
-                "email": IDs.emailID.value,
-                "subject": IDs.subjectID.value,
-                "found_out": IDs.foundOutID.value,
-                "message_html": IDs.messageID.value
-            },
-        };
-
         // Send email if everything is valid
-        if (name && email && subject && foundOut && message) {
+        if (name && email && subject && message) {
+            const data = {
+                service_id: 'default_service',
+                template_id: 'template_GUD945DV',
+                user_id: 'user_6lWJz8Dg5i8zIDgfKxhsy',
+                template_params: {
+                    // "from_name": '12',
+                    "from_name": IDs.nameID.value,
+                    // "email": '12',
+                    "email": IDs.emailID.value,
+                    // "subject": '12',
+                    "subject": IDs.subjectID.value,
+                    "found_out": "12",
+                    "message_html": IDs.messageID.value
+                    // "message_html": '12'
+                },
+            };
             // add spinner
             document.getElementById('contact-submit-btn-text').classList.add('hidden');
             document.getElementById('form-spinner').classList.add('block-imp');
@@ -205,86 +205,87 @@ window.onload = function () {
                     showSuccess();
                 }, function (error) {
                     showError();
+                    alert("Send email failed!\r\n Response:\n " + JSON.stringify(error));
                 });
         }
     }
 
-    function curtainsJS() {
-        let mousePosition = {
-            x: 0,
-            y: 0,
-        };
+    // function curtainsJS() {
+    //     let mousePosition = {
+    //         x: 0,
+    //         y: 0,
+    //     };
 
-        let pixelRatio = window.devicePixelRatio ? window.devicePixelRatio : 1.0;
+    //     let pixelRatio = window.devicePixelRatio ? window.devicePixelRatio : 1.0;
 
-        let webGLCurtain = new Curtains({
-            container: "canvas",
-            watchScroll: false
-        });
+    //     let webGLCurtain = new Curtains({
+    //         container: "canvas",
+    //         watchScroll: false
+    //     });
 
-        let planeElement = document.getElementsByClassName("plane")[0];
+    //     let planeElement = document.getElementsByClassName("plane")[0];
 
-        let params = {
-            vertexShaderID: "plane-vs",
-            fragmentShaderID: "plane-fs",
-            widthSegments: 20,
-            heightSegments: 20,
-            uniforms: {
-                resolution: {
-                    name: "uResolution",
-                    type: "2f",
-                    value: [pixelRatio * planeElement.clientWidth, pixelRatio * planeElement.clientHeight],
-                },
-                time: {
-                    name: "uTime",
-                    type: "1f",
-                    value: 0,
-                },
-                mousePosition: {
-                    name: "uMousePosition",
-                    type: "2f",
-                    value: [mousePosition.x, mousePosition.y],
-                },
-                mouseStrength: {
-                    name: "uMouseStrength",
-                    type: "1f",
-                    value: 0,
-                },
-            }
-        }
+    //     let params = {
+    //         vertexShaderID: "plane-vs",
+    //         fragmentShaderID: "plane-fs",
+    //         widthSegments: 20,
+    //         heightSegments: 20,
+    //         uniforms: {
+    //             resolution: {
+    //                 name: "uResolution",
+    //                 type: "2f",
+    //                 value: [pixelRatio * planeElement.clientWidth, pixelRatio * planeElement.clientHeight],
+    //             },
+    //             time: {
+    //                 name: "uTime",
+    //                 type: "1f",
+    //                 value: 0,
+    //             },
+    //             mousePosition: {
+    //                 name: "uMousePosition",
+    //                 type: "2f",
+    //                 value: [mousePosition.x, mousePosition.y],
+    //             },
+    //             mouseStrength: {
+    //                 name: "uMouseStrength",
+    //                 type: "1f",
+    //                 value: 0,
+    //             },
+    //         }
+    //     }
 
-        let plane = webGLCurtain.addPlane(planeElement, params);
+    //     let plane = webGLCurtain.addPlane(planeElement, params);
 
-        plane && plane.onReady(function () {
+    //     plane && plane.onReady(function () {
 
-            plane.setPerspective(35);
+    //         plane.setPerspective(35);
 
-            document.querySelector(".plane").addEventListener("mousemove", function (e) {
-                if (screenHeight.matches && screenWidth.matches) {
-                    handleMovement(e, plane);
-                }
-            });
-        }).onRender(function () {
+    //         document.querySelector(".plane").addEventListener("mousemove", function (e) {
+    //             if (screenHeight.matches && screenWidth.matches) {
+    //                 handleMovement(e, plane);
+    //             }
+    //         });
+    //     }).onRender(function () {
 
-            plane.uniforms.time.value++;
+    //         plane.uniforms.time.value++;
 
-            plane.uniforms.mouseStrength.value = Math.max(0, plane.uniforms.mouseStrength.value - 0.0075);
-        }).onAfterResize(function () {
-            let planeBoundingRect = plane.getBoundingRect();
-            plane.uniforms.resolution.value = [planeBoundingRect.width, planeBoundingRect.height];
-        });
+    //         plane.uniforms.mouseStrength.value = Math.max(0, plane.uniforms.mouseStrength.value - 0.0075);
+    //     }).onAfterResize(function () {
+    //         let planeBoundingRect = plane.getBoundingRect();
+    //         plane.uniforms.resolution.value = [planeBoundingRect.width, planeBoundingRect.height];
+    //     });
 
-        function handleMovement(e, plane) {
+    //     function handleMovement(e, plane) {
 
-            mousePosition.x = e.clientX;
-            mousePosition.y = e.clientY;
+    //         mousePosition.x = e.clientX;
+    //         mousePosition.y = e.clientY;
 
-            let mouseCoords = plane.mouseToPlaneCoords(mousePosition.x, mousePosition.y);
+    //         let mouseCoords = plane.mouseToPlaneCoords(mousePosition.x, mousePosition.y);
 
-            plane.uniforms.mousePosition.value = [mouseCoords.x, mouseCoords.y];
-            plane.uniforms.mouseStrength.value = 0.7;
-        }
-    };
+    //         plane.uniforms.mousePosition.value = [mouseCoords.x, mouseCoords.y];
+    //         plane.uniforms.mouseStrength.value = 0.7;
+    //     }
+    // };
 
     function allowCookies() {
         setCookie('consent', true, 365);
@@ -360,14 +361,16 @@ window.onload = function () {
     };
 
     // Validate inputs on focus out
-    // IDs.nameID.addEventListener('focusout', validateName);
-    // IDs.emailID.addEventListener('focusout', validateEmail);
-    // IDs.subjectID.addEventListener('focusout', validateSubject);
-    // IDs.foundOutID.addEventListener('focusout', validateFoundOut);
-    // IDs.messageID.addEventListener('focusout', validateMessage);
+    if (document.getElementById('particles-js')) {
+        IDs.nameID.addEventListener('focusout', validateName);
+        IDs.emailID.addEventListener('focusout', validateEmail);
+        IDs.subjectID.addEventListener('focusout', validateSubject);
+        // IDs.foundOutID.addEventListener('focusout', validateFoundOut);
+        IDs.messageID.addEventListener('focusout', validateMessage);
 
-    // // Send email on submit
-    // document.getElementById('contact-form').addEventListener('submit', submitEmail);
+        // Send email on submit
+        document.getElementById('contact-form').addEventListener('submit', submitEmail);
+    }
 
     document.getElementById('btn-allow-cookies').addEventListener('click', () => {
         allowCookies();
@@ -396,18 +399,6 @@ window.onload = function () {
 
     function toggleLangList() {
         document.getElementById('lang-list').classList.toggle('invisible');
-    };
-
-    function glitchText() {
-        for (let r = 0; r < results.length; r++) {
-            let chars = results[r].chars;
-            for (let c = 0; c < chars.length; c++) {
-                chars[c].style.setProperty('--count', Math.random() * 5 + 1);
-                for (let g = 0; g < 10; g++) {
-                    chars[c].style.setProperty('--char-' + g, '"' + glitches[Math.floor(Math.random() * glitches.length)] + '"');
-                }
-            }
-        }
     };
 
     document.getElementById('checkbox').addEventListener('click', toggleNav);
@@ -473,9 +464,7 @@ window.onload = function () {
 
     // Mooving letters
 
-
     (function () {
-        // curtainsJS();
         ScrollOut({
             once: false,
             targets: '.word',
@@ -499,18 +488,23 @@ window.onload = function () {
             },
         });
         initCookies();
-        // VANTA.FOG({
-        //     el: "#hero",
-        //     highlightColor: 0xff0096,
-        //     midtoneColor: 0x7800ff,
-        //     lowlightColor: 0x2f03ff,
-        //     baseColor: 0xffe6e6,
-        //     blurFactor: 0.6,
-        //     speed: 1.,
-        //     zoom: 1.
-        // });
-        particlesJS.load('particles-js', 'particlesjs-config.json', function () {
-            console.log('callback - particles.js config loaded');
-        });
+        if (document.getElementById('hero')) {
+            VANTA.FOG({
+                el: "#hero",
+                highlightColor: 0xff0096,
+                midtoneColor: 0x7800ff,
+                lowlightColor: 0x2f03ff,
+                baseColor: 0xffe6e6,
+                blurFactor: 0.6,
+                speed: 1.,
+                zoom: 1.
+            });
+        }
+        if (document.getElementById('particles-js')) {
+            particlesJS.load('particles-js', 'particlesjs-config.json', function () {
+                // console.log('callback - particles.js config loaded');
+            });
+            emailjs.init("user_6lWJz8Dg5i8zIDgfKxhsy");
+        }
     })();
 }
