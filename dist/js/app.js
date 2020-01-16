@@ -499,15 +499,18 @@ window.onload = function () {
             },
         });
         initCookies();
-        VANTA.FOG({
-            el: "#hero",
-            highlightColor: 0xff0096,
-            midtoneColor: 0x7800ff,
-            lowlightColor: 0x2f03ff,
-            baseColor: 0xffe6e6,
-            blurFactor: 0.6,
-            speed: 1.,
-            zoom: 1.
-        })
+        // VANTA.FOG({
+        //     el: "#hero",
+        //     highlightColor: 0xff0096,
+        //     midtoneColor: 0x7800ff,
+        //     lowlightColor: 0x2f03ff,
+        //     baseColor: 0xffe6e6,
+        //     blurFactor: 0.6,
+        //     speed: 1.,
+        //     zoom: 1.
+        // });
+        particlesJS.load('particles-js', 'particlesjs-config.json', function () {
+            console.log('callback - particles.js config loaded');
+        });
     })();
 }

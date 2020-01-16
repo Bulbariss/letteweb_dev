@@ -567,12 +567,12 @@ textarea::-webkit-input-placeholder {
     margin-right: auto;
 }
 
-#contact-page {
+/* #contact-page {
     background-image: url(../img/test5.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}
+} */
 
 #blob-top {
     height: 70vh;
@@ -1216,4 +1216,28 @@ label>.label-body {
         height: 50vh;
         bottom: -8%;
     }
+}
+
+body {
+    margin: 0;
+    font: normal 75% Arial, Helvetica, sans-serif;
+}
+
+canvas {
+    /* position: absolute; */
+    display: block;
+    vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
 }
