@@ -11431,23 +11431,28 @@ canvas {
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #333;
+  /* color: #3C4859; */
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
   color: #333;
+  /* color: #3C4859; */
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #333;
+  /* color: #3C4859; */
 }
 
 input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   color: #333;
+  /* color: #3C4859; */
 }
 
 input::placeholder,
 textarea::placeholder {
   color: #333;
+  /* color: #3C4859; */
 }
 
 input:-ms-input-placeholder,
@@ -11693,16 +11698,20 @@ textarea::-webkit-input-placeholder {
   background-color: #f6f5f4;
 }
 
+.bg-ivory {
+  background-color: #f7f1e3;
+}
+
 /* Classes */
 
 /* IDs */
 
-#hero {
-  background-image: url(../img/bg-main.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+/* #hero {
+    background-image: url(../img/bg-main.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} */
 
 #studio-hero {
   background-image: url(../img/bg-studio.jpg);

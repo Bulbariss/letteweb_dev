@@ -62,38 +62,39 @@
     </ul>
 
 
-    <section id="contact-page" class="min-h-screen flex text-muted-black justify-center">
-        <div id="content-page-container"
-            class="self-center flex flex-col sm:flex-row bg-gray-100 rounded-lg max-w-80 mx-6 sm:mx-10 lg:mx-16">
-            <div class="p-4 sm:p-6 relative max-w-lg w-full">
-                <h1 class="text-4xl TTNormsPro-Medium">We'll be glad to hear from you.</h1>
-                <div class="absolute bottom-0 pb-4 sm:pb-6">
-                    <p class="TTNormsPro-Bold mb-2 text-lg">Email</p>
-                    <p class="mb-6">work@letteweb.lv</p>
-                    <p class="TTNormsPro-Bold mb-2 text-lg">Socials</p>
-                    <p class="mb-1">Facebook</p>
-                    <p class="">Instagram</p>
+    <section id="contact-page" class="min-h-screen text-muted-black flex justify-center">
+        <div id="content-page-container" class="px-6
+            sm:px-10 lg:px-16 self-center py-20">
+            <div class="flex flex-col max-w-4xl md:flex-row bg-gray-100 rounded-lg w-fit">
+                <div class="pb-0 p-4 sm:px-6 sm:pt-6 md:pb-6 relative w-full">
+                    <h1 class="text-3xl md:text-4xl TTNormsPro-Medium">We'll be glad to hear from you.</h1>
+                    <div class="absolute bottom-0 pb-4 sm:pb-6 hidden md:block">
+                        <p class="TTNormsPro-Bold mb-2 text-lg">Email</p>
+                        <p class="mb-6">work@letteweb.lv</p>
+                        <p class="TTNormsPro-Bold mb-2 text-lg">Socials</p>
+                        <p class="mb-1">Facebook</p>
+                        <p class="">Instagram</p>
+                    </div>
                 </div>
-            </div>
-            <div id="form-container" class="p-4 sm:p-6 max-w-lg w-full">
-                <!-- <p class="text-3xl TTNormsPro-Bold pb-4">Contact Us</p> -->
-                <form id="contact-form">
-                    <div id="email-input" class="w-full  sm:pb-0">
-                        <!-- <label class="text-left block" for="input-email">Your Email</label> -->
-                        <input class="w-full mb-1 " type="text" placeholder="Your Email" id="input-email">
-                        <p class="text-sm text-red-600 invisible" id="input-email-p">Enter valid email</p>
-                    </div>
-                    <div id="name-input" class=" w-full  sm:pb-0">
-                        <!-- <label class="text-left block" for="input-name">Your Name</label> -->
-                        <input class="w-full d-flex mb-1" type="text" placeholder="Your Name" id="input-name">
-                        <p class="text-sm text-red-600 invisible" id="input-name-p">Enter valid name</p>
-                    </div>
-                    <div id="subject-input" class=" w-full sm:pb-0 pb-2">
-                        <!-- <label class="text-left block" for="input-subject">Subject</label> -->
-                        <input class="w-full d-flex mb-1" type="text" placeholder="Subject" id="input-subject">
-                        <p class="text-sm text-red-600 invisible" id="input-subject-p">Enter subject</p>
-                    </div>
-                    <!-- <div id="foundOut-input" class="sm:w-6/12 w-full sm:pl-4 sm:pb-0 pb-2">
+                <div id="form-container" class="p-4 sm:p-6 w-full">
+                    <!-- <p class="text-3xl TTNormsPro-Bold pb-4">Contact Us</p> -->
+                    <form id="contact-form">
+                        <div id="email-input" class="w-full  sm:pb-0">
+                            <!-- <label class="text-left block" for="input-email">Your Email</label> -->
+                            <input class="w-full mb-1 " type="text" placeholder="Your Email" id="input-email">
+                            <p class="text-sm text-red-600 invisible" id="input-email-p">Enter valid email</p>
+                        </div>
+                        <div id="name-input" class=" w-full  sm:pb-0">
+                            <!-- <label class="text-left block" for="input-name">Your Name</label> -->
+                            <input class="w-full d-flex mb-1" type="text" placeholder="Your Name" id="input-name">
+                            <p class="text-sm text-red-600 invisible" id="input-name-p">Enter valid name</p>
+                        </div>
+                        <div id="subject-input" class=" w-full sm:pb-0 pb-2">
+                            <!-- <label class="text-left block" for="input-subject">Subject</label> -->
+                            <input class="w-full d-flex mb-1" type="text" placeholder="Subject" id="input-subject">
+                            <p class="text-sm text-red-600 invisible" id="input-subject-p">Enter subject</p>
+                        </div>
+                        <!-- <div id="foundOut-input" class="sm:w-6/12 w-full sm:pl-4 sm:pb-0 pb-2">
                         <label class="text-left block" for="input-foundOut">How did you find out about
                             us?</label>
                         <select class="w-full d-flex mb-1" for="input-foundOut" id="input-foundOut">
@@ -107,26 +108,28 @@
                         </select>
                         <p class="text-sm text-red-600 invisible" id="input-foundOut-p">Choose answer</p>
                     </div> -->
-                    <div id="message-input" class=" w-full ">
-                        <!-- <label class="text-left block" for="input-message">Message</label> -->
-                        <textarea class="w-full " placeholder="Message" id="input-message"></textarea>
-                        <p class="text-sm text-red-600 invisible" id="input-message-p">Enter message</p>
-                    </div>
-                    <!-- <input class="btn-skeleton bg-gray-900 text-white text-xs w-full text-base" type="submit" -->
-                    <!-- value="Submit"> -->
-                    <button id="contact-submit-btn"
-                        class="btn-skeleton bg-gray-900 text-white w-full text-base  cursor-not-allowed" type="submit">
-                        <p class="text-base" id="contact-submit-btn-text">Submit</p>
-                        <p class="text-base hidden" id="contact-submit-btn-success">Message sent</p>
-                        <p class="text-base hidden" id="contact-submit-btn-error">Error, message not sent</p>
-                        <div class="lds-ring hidden mx-auto" id="form-spinner">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                        <div id="message-input" class=" w-full ">
+                            <!-- <label class="text-left block" for="input-message">Message</label> -->
+                            <textarea class="w-full " placeholder="Message" id="input-message"></textarea>
+                            <p class="text-sm text-red-600 invisible" id="input-message-p">Enter message</p>
                         </div>
-                    </button>
-                </form>
+                        <!-- <input class="btn-skeleton bg-gray-900 text-white text-xs w-full text-base" type="submit" -->
+                        <!-- value="Submit"> -->
+                        <button id="contact-submit-btn"
+                            class="btn-skeleton bg-gray-900 text-white w-full text-base  cursor-not-allowed"
+                            type="submit">
+                            <p class="text-base" id="contact-submit-btn-text">Submit</p>
+                            <p class="text-base hidden" id="contact-submit-btn-success">Message sent</p>
+                            <p class="text-base hidden" id="contact-submit-btn-error">Error, message not sent</p>
+                            <div class="lds-ring hidden mx-auto" id="form-spinner">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
