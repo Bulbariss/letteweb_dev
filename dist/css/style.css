@@ -11429,6 +11429,11 @@ canvas {
   text-rendering: optimizeLegibility
 }
 
+input {
+  vertical-align: middle;
+  line-height: normal;
+}
+
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #333;
   /* color: #3C4859; */
@@ -11458,11 +11463,13 @@ textarea::placeholder {
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #333;
+  line-height: 1.5;
 }
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #333;
+  line-height: 1.5;
 }
 
 ::-moz-selection {
@@ -12739,18 +12746,10 @@ label>.label-body {
   }
 }
 
-body {
-  margin: 0;
-  font: normal 75% Arial, Helvetica, sans-serif;
-}
-
 canvas {
-  /* position: absolute; */
   display: block;
   vertical-align: bottom;
 }
-
-/* ---- particles.js container ---- */
 
 #particles-js {
   position: relative;

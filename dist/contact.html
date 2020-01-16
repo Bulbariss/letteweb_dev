@@ -18,7 +18,7 @@
 
 <body class="">
     <section id="navbar" class="fixed w-full">
-        <div class="max-w-80 flex mx-auto h-full items-center px-6 sm:px-10 lg:px-16">
+        <div class="max-w-80 flex mx-auto h-full items-center px-6 sm:px-10 lg:px-16 relative">
             <div class="logo mr-auto w-auto h-auto TTNormsPro-ExtraBold">
                 <a class="text-2xl let-space-3" href="index.html">LETTEWEB</a>
             </div>
@@ -80,20 +80,20 @@
                 <div id="form-container" class="p-4 sm:p-6 w-full">
                     <!-- <p class="text-3xl TTNormsPro-Bold pb-4">Contact Us</p> -->
                     <form id="contact-form">
-                        <div id="email-input" class="w-full  sm:pb-0">
-                            <!-- <label class="text-left block" for="input-email">Your Email</label> -->
-                            <input class="w-full mb-1 " type="text" placeholder="Your Email" id="input-email">
-                            <p class="text-sm text-red-600 invisible" id="input-email-p">Enter valid email</p>
-                        </div>
-                        <div id="name-input" class=" w-full  sm:pb-0">
+                        <div id="name-input" class=" w-full  pb-2">
                             <!-- <label class="text-left block" for="input-name">Your Name</label> -->
                             <input class="w-full d-flex mb-1" type="text" placeholder="Your Name" id="input-name">
-                            <p class="text-sm text-red-600 invisible" id="input-name-p">Enter valid name</p>
+                            <p class="text-xs text-red-600 invisible" id="input-name-p">Enter valid name</p>
                         </div>
-                        <div id="subject-input" class=" w-full sm:pb-0 pb-2">
+                        <div id="email-input" class="w-full  pb-2">
+                            <!-- <label class="text-left block" for="input-email">Your Email</label> -->
+                            <input class="w-full mb-1 " type="text" placeholder="Your Email" id="input-email">
+                            <p class="text-xs text-red-600 invisible" id="input-email-p">Enter valid email</p>
+                        </div>
+                        <div id="subject-input" class=" w-full pb-2">
                             <!-- <label class="text-left block" for="input-subject">Subject</label> -->
                             <input class="w-full d-flex mb-1" type="text" placeholder="Subject" id="input-subject">
-                            <p class="text-sm text-red-600 invisible" id="input-subject-p">Enter subject</p>
+                            <p class="text-xs text-red-600 invisible" id="input-subject-p">Enter subject</p>
                         </div>
                         <!-- <div id="foundOut-input" class="sm:w-6/12 w-full sm:pl-4 sm:pb-0 pb-2">
                         <label class="text-left block" for="input-foundOut">How did you find out about
@@ -109,10 +109,10 @@
                         </select>
                         <p class="text-sm text-red-600 invisible" id="input-foundOut-p">Choose answer</p>
                     </div> -->
-                        <div id="message-input" class=" w-full ">
+                        <div id="message-input" class=" w-full pb-2">
                             <!-- <label class="text-left block" for="input-message">Message</label> -->
                             <textarea class="w-full " placeholder="Message" id="input-message"></textarea>
-                            <p class="text-sm text-red-600 invisible" id="input-message-p">Enter message</p>
+                            <p class="text-xs text-red-600 invisible" id="input-message-p">Enter message</p>
                         </div>
                         <!-- <input class="btn-skeleton bg-gray-900 text-white text-xs w-full text-base" type="submit" -->
                         <!-- value="Submit"> -->
