@@ -7,7 +7,6 @@ window.onload = function () {
     let name = false;
     let email = false;
     let subject = false;
-    // let foundOut = false;
     let message = false;
 
 
@@ -19,12 +18,10 @@ window.onload = function () {
         nameID: document.getElementById('input-name'),
         emailID: document.getElementById('input-email'),
         subjectID: document.getElementById('input-subject'),
-        foundOutID: document.getElementById('input-foundOut'),
         messageID: document.getElementById('input-message'),
         name_P_ID: document.getElementById('input-name-p'),
         email_P_ID: document.getElementById('input-email-p'),
         subject_P_ID: document.getElementById('input-subject-p'),
-        foundOut_P_ID: document.getElementById('input-foundOut-p'),
         message_P_ID: document.getElementById('input-message-p'),
     };
 
@@ -49,7 +46,6 @@ window.onload = function () {
         IDs.nameID.value = null;
         IDs.emailID.value = null;
         IDs.subjectID.value = null;
-        IDs.foundOutID.value = null;
         IDs.messageID.value = null;
     }
 
@@ -58,12 +54,10 @@ window.onload = function () {
         IDs.nameID.classList.remove('invalid-form');
         IDs.emailID.classList.remove('invalid-form');
         IDs.subjectID.classList.remove('invalid-form');
-        IDs.foundOutID.classList.remove('invalid-form');
         IDs.messageID.classList.remove('invalid-form');
         IDs.name_P_ID.classList.remove('invalid-form-text');
         IDs.email_P_ID.classList.remove('invalid-form-text');
         IDs.subject_P_ID.classList.remove('invalid-form-text');
-        IDs.foundOut_P_ID.classList.remove('invalid-form-text');
         IDs.message_P_ID.classList.remove('invalid-form-text');
     }
 
@@ -102,18 +96,6 @@ window.onload = function () {
             subject = false;
         }
     }
-
-    // Check if cell input is valid
-    // function validateFoundOut() {
-    //     let x = document.querySelector('#input-foundOut').value;
-    //     if (x) {
-    //         validInput('input-foundOut');
-    //         foundOut = true;
-    //     } else {
-    //         invalidInput('input-foundOut');
-    //         foundOut = false;
-    //     }
-    // };
 
     // Check if cell input is valid
     function validateMessage() {
@@ -175,7 +157,6 @@ window.onload = function () {
         validateName();
         validateEmail();
         validateSubject();
-        // validateFoundOut();
         validateMessage();
 
         // Send email if everything is valid
@@ -365,7 +346,6 @@ window.onload = function () {
         IDs.nameID.addEventListener('focusout', validateName);
         IDs.emailID.addEventListener('focusout', validateEmail);
         IDs.subjectID.addEventListener('focusout', validateSubject);
-        // IDs.foundOutID.addEventListener('focusout', validateFoundOut);
         IDs.messageID.addEventListener('focusout', validateMessage);
 
         // Send email on submit
@@ -491,13 +471,13 @@ window.onload = function () {
         if (document.getElementById('hero')) {
             VANTA.FOG({
                 el: "#hero",
-                highlightColor: 0xff0096,
-                midtoneColor: 0x7800ff,
-                lowlightColor: 0x2f03ff,
-                baseColor: 0xffe6e6,
+                highlightColor: 0x4299e1,
+                midtoneColor: 0xffffff,
+                lowlightColor: 0xffffff,
+                baseColor: 0xffffff,
                 blurFactor: 0.6,
-                speed: 1.,
-                zoom: 1.
+                speed: 1.2,
+                zoom: 1.4
             });
         }
         if (document.getElementById('particles-js')) {
