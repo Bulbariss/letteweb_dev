@@ -362,7 +362,9 @@ window.onload = function () {
         deactivateCookies();
     });
 
-    document.getElementById('btn-change-cookie-preferences').addEventListener('click', showCookieBanner);
+    document.querySelectorAll('.btn-change-cookie-preferences').forEach(btn => {
+        btn.addEventListener('click', showCookieBanner);
+    });
 
     function toggleNav() {
         document.getElementById('menu').classList.toggle('active');
@@ -385,6 +387,10 @@ window.onload = function () {
     window.addEventListener('resize', disableNav);
     document.getElementById('toggle-lang-list').addEventListener('click', toggleLangList);
 
+    // Set height of form container
+    function setHeightOfFormContainer() {
+        document.querySelector('#particles-js').style.minHeight = document.getElementById('content-page-container').offsetHeight + 'px';
+    }
     // Mooving letters
     function moovingLetters() {
         const textWrapper = document.querySelector('#mooving-letters');
@@ -467,23 +473,34 @@ window.onload = function () {
                 moovingLetters();
             },
         });
+        ScrollOut({
+            targets: '#enable-navbar-invert',
+            onShown: function (el) {
+                document.getElementById('navbar').classList.remove('color-invert');
+            },
+            onHidden: function (el) {
+                document.getElementById('navbar').classList.add('color-invert');
+            }
+        });
         initCookies();
         if (document.getElementById('hero')) {
-            VANTA.FOG({
-                el: "#hero",
-                highlightColor: 0x4299e1,
-                midtoneColor: 0xffffff,
-                lowlightColor: 0xffffff,
-                baseColor: 0xffffff,
-                blurFactor: 0.6,
-                speed: 1.2,
-                zoom: 1.4
-            });
+            // VANTA.FOG({
+            //     el: "#hero",
+            //     highlightColor: 0x4299e1,
+            //     midtoneColor: 0xffffff,
+            //     lowlightColor: 0xffffff,
+            //     baseColor: 0xffffff,
+            //     blurFactor: 0.6,
+            //     speed: 1.4,
+            //     zoom: 1.4
+            // });
         }
         if (document.getElementById('particles-js')) {
             particlesJS.load('particles-js', 'particlesjs-config.json', function () {
                 // console.log('callback - particles.js config loaded');
             });
+            setHeightOfFormContainer();
+            window.addEventListener('resize', setHeightOfFormContainer);
             emailjs.init("user_6lWJz8Dg5i8zIDgfKxhsy");
         }
     })();

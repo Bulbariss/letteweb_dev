@@ -11582,6 +11582,11 @@ textarea::-webkit-input-placeholder {
 
 /* Classes */
 
+.padding-inline-start {
+  -webkit-padding-start: 30px;
+          padding-inline-start: 30px;
+}
+
 .TTNormsPro-Regular {
   font-family: TTNormsPro-Regular;
   font-weight: normal;
@@ -11652,6 +11657,10 @@ textarea::-webkit-input-placeholder {
 
 .text-muted-black {
   color: #333333;
+}
+
+.text-muted-gray {
+  color: #414141;
 }
 
 .noSelect {
@@ -11749,7 +11758,7 @@ textarea::-webkit-input-placeholder {
   background-color: #1a202c;
 }
 
-#footer-container a:hover {
+.hover-opacity:hover {
   opacity: 0.6;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -12748,7 +12757,7 @@ label>.label-body {
 
 canvas {
   display: block;
-  vertical-align: bottom;
+  max-height: unset;
 }
 
 #particles-js {
@@ -12760,6 +12769,13 @@ canvas {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+}
+
+#enable-navbar-invert {
+  height: 10px;
+  margin-top: -55px;
+  z-index: -1;
+  visibility: hidden;
 }
 
 @media (min-width: 640px) {

@@ -144,7 +144,9 @@ textarea::-webkit-input-placeholder {
 
 
 
-
+.padding-inline-start {
+    padding-inline-start: 30px;
+}
 
 .TTNormsPro-Regular {
     font-family: TTNormsPro-Regular;
@@ -221,6 +223,10 @@ textarea::-webkit-input-placeholder {
 
 .text-muted-black {
     color: #333333;
+}
+
+.text-muted-gray {
+    color: #414141;
 }
 
 .noSelect {
@@ -310,7 +316,7 @@ textarea::-webkit-input-placeholder {
     background-color: #1a202c;
 }
 
-#footer-container a:hover {
+.hover-opacity:hover {
     opacity: 0.6;
     transition: all 0.2s;
 }
@@ -1228,7 +1234,7 @@ label>.label-body {
 
 canvas {
     display: block;
-    vertical-align: bottom;
+    max-height: unset;
 }
 
 #particles-js {
@@ -1240,4 +1246,11 @@ canvas {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
+}
+
+#enable-navbar-invert {
+    height: 10px;
+    margin-top: -55px;
+    z-index: -1;
+    visibility: hidden;
 }

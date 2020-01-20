@@ -18,7 +18,7 @@
 </head>
 
 <body class="">
-    <section id="navbar" class="fixed w-full color-invert">
+    <section id="navbar" class="fixed w-full">
         <div class="max-w-80 flex mx-auto h-full items-center px-6 sm:px-10 lg:px-16 relative">
             <div class="logo mr-auto w-auto h-auto TTNormsPro-ExtraBold">
                 <a class="text-2xl let-space-3" href="">LETTEWEB</a>
@@ -65,14 +65,9 @@
 
     <section id="hero" class="min-h-screen bg-white flex">
         <div class="px-6 sm:px-10 lg:px-16 w-full mx-auto self-center">
-            <h1 class="TTNormsPro-Bold text-4xl max-w-2xl ml-0 ">
-                Create an unforgettable first
-                impression by
-                giving
-                your
-                business a
-                fresh
-                identity!</h1>
+            <h1 class="TTNormsPro-Bold text-4xl max-w-2xl ml-0">
+                Create an unforgettable first impression by giving your business a fresh identity!
+            </h1>
         </div>
     </section>
 
@@ -81,6 +76,7 @@
     </section> -->
 
     <section id="main-content" class="min-h-screen bg-gray-nice flex relative">
+        <p class="absolute top-0" data-scroll="in" id="enable-navbar-invert">k</p>
         <img src="img/blob_1.svg" id="blob-top" alt="" class=" absolute top-0 left-0">
         <h2 class="max-w-lg p-8 flex self-center mx-auto text-xl color-invert z-10  text-muted-black color-invert">
             <!-- Our team at Letteweb builds user friendly, functional, strategically thought-out and beautifully designed
@@ -114,12 +110,11 @@
                 </p>
             </div>
         </div>
-
     </section>
 
     <section id="footer">
         <div class="bg-gray-nice w-full">
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            <!-- <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
                 <defs>
                     <path id="gentle-wave"
@@ -131,7 +126,7 @@
                     <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(26,32,44,0.3)" />
                     <use xlink:href="#gentle-wave" x="48" y="7" fill="#1a202c" />
                 </g>
-            </svg>
+            </svg> -->
         </div>
         <div class="flex flex-wrap max-w-80 px-6 sm:px-10 lg:px-16  pt-16 pb-10 sm:py-24 text-white"
             id="footer-container">
@@ -165,101 +160,6 @@
         </div>
     </section>
 
-    <script id="plane-vs" type="x-shader/x-vertex">
-        #ifdef GL_ES
-    precision mediump float;
-    #endif
-
-    // those are the mandatory attributes that the lib sets
-    attribute vec3 aVertexPosition;
-    attribute vec2 aTextureCoord;
-
-    // those are mandatory uniforms that the lib sets and that contain our model view and projection matrix
-    uniform mat4 uMVMatrix;
-    uniform mat4 uPMatrix;
-
-    // our time uniform
-    uniform float uTime;
-
-    // our mouse position uniform
-    uniform vec2 uMousePosition;
-
-    // our mouse strength
-    uniform float uMouseStrength;
-
-    // our texture matrix uniform (this is the lib default name, but it could be changed)
-    uniform mat4 uTextureMatrix0;
-
-    // if you want to pass your vertex and texture coords to the fragment shader
-    varying vec3 vVertexPosition;
-    varying vec2 vTextureCoord;
-
-void main() {
-        // get the vertex position from its attribute
-        vec3 vertexPosition = aVertexPosition;
-        // get the distance between our vertex and the mouse position
-        float distanceFromMouse = distance(uMousePosition, vec2(vertexPosition.x, vertexPosition.y));
-
-        // this will define how close the ripples will be from each other. The bigger the number, the more ripples you'll get
-        float rippleFactor = 6.0;
-
-        // calculate our ripple effect
-        float rippleEffect = (cos(rippleFactor * (distanceFromMouse - (uTime / 220.0))) / 1.10);
-
-        // calculate our distortion effect
-        float distortionEffect = rippleEffect * uMouseStrength ;
-
-        // apply it to our vertex position
-        vertexPosition += distortionEffect / 15.0;
-        // set its position based on projection and model view matrix
-        gl_Position = uPMatrix * uMVMatrix * vec4(vertexPosition, 1.0);
-
-        // set the varying variables
-        // thanks to the texture matrix we will be able to calculate accurate texture coords
-        // so that our texture will always fit our plane without being distorted
-        vTextureCoord = (uTextureMatrix0 * vec4(aTextureCoord, 0.0, 1.0)).xy;
-        vVertexPosition = vertexPosition;
-    }
-  </script>
-    <script id="plane-fs" type="x-shader/x-fragment">
-        #ifdef GL_ES
-		precision mediump float;
-		#endif
-
-    // get our varying variables
-    varying vec3 vVertexPosition;
-    varying vec2 vTextureCoord;
-
-    // the uniform we declared inside our javascript
-    uniform float uTime;
-
-    // our texture sampler (this is the lib default name, but it could be changed)
-    uniform sampler2D uSampler0;
-
-    void main() {
-      // get our texture coords
-      vec2 textureCoord = vTextureCoord;
-
-      // displace our pixels along both axis based on our time uniform and texture UVs
-      // this will create a kind of water surface effect
-      // try to comment a line or change the constants to see how it changes the effect
-      // reminder : textures coords are ranging from 0.0 to 1.0 on both axis
-      const float PI = 3.141592;
-
-      textureCoord.x += (
-        sin(textureCoord.x * 10.0 + ((uTime * (PI / 3.0)) * 0.031))
-        + sin(textureCoord.y * 10.0 + ((uTime * (PI / 2.489)) * 0.017))
-        ) * 0.0075;
-
-      textureCoord.y += (
-        sin(textureCoord.y * 20.0 + ((uTime * (PI / 2.023)) * 0.023))
-        + sin(textureCoord.x * 20.0 + ((uTime * (PI / 3.1254)) * 0.037))
-        ) * 0.0125;
-            
-      gl_FragColor = texture2D(uSampler0, textureCoord);
-  }
-</script>
-
     <div id="cookie-banner" class="fixed bottom-0 w-full pb-4 px-4 hidden z-50">
         <div id="cookie-banner-container"
             class="max-w-80 bg-gray-200 flex rounded-lg py-4 sm:py-2 items-center flex-col sm:flex-row px-4 w-fit">
@@ -274,7 +174,6 @@ void main() {
     </div>
     <!-- <script src="../node_modules/splitting/dist/splitting.min.js"></script> -->
     <!-- <script src="../node_modules/scroll-out/dist/scroll-out.min.js"></script> -->
-    <script src="https://www.curtainsjs.com/build/curtains.min.js" type="text/javascript"></script>
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <script src="js/app.js"></script>

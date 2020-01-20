@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="../node_modules/splitting/dist/splitting.css">
+    <link rel="stylesheet" href="../node_modules/splitting/dist/splitting-cells.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/three.min.js"></script>
+    <script src="js/vanta.fog.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body class="">
+    <section id="navbar" class="fixed w-full">
+        <div class="max-w-80 flex mx-auto h-full items-center px-6 sm:px-10 lg:px-16 relative">
+            <div class="logo mr-auto w-auto h-auto TTNormsPro-ExtraBold">
+                <a class="text-2xl let-space-3" href="">LETTEWEB</a>
+            </div>
+            <div class="ml-auto w-auto h-auto text-sm  hidden sm:flex TTNormsPro-Bold">
+                <a href="projects.html" class="link-animation noSelect px-4 py-3"><span
+                        data-letters="PROJECTS">PROJECTS</span></a>
+                <a href="studio.html" class="link-animation noSelect px-4 py-3"><span
+                        data-letters="STUDIO">STUDIO</span></a>
+                <a href="contact.html" class="link-animation noSelect px-4 py-3"><span data-letters="CONTACT"
+                        class="noSelect">CONTACT</span></a>
+                <a id="toggle-lang-list" class="link-animation noSelect px-4 py-3"><span data-letters="EN">EN</span></a>
+            </div>
+            <div class="flex hidden sm:flex flex-col absolute right-0 mx-6 sm:mx-10 lg:mx-16 text-sm TTNormsPro-Bold invisible"
+                id="lang-list">
+                <a href="#" class="link-animation noSelect px-4 py-3 "><span data-letters="LV">LV</span></a>
+                <a href="#" class="link-animation noSelect px-4 py-3"><span data-letters="RU">RU</span></a>
+            </div>
+            <div id="menuToggle" class="block sm:hidden">
+                <input type="checkbox" id="checkbox" class="checkbox">
+                <label for="checkbox" class="label"></label>
+            </div>
+    </section>
+    <ul id="menu">
+        <div id="menu-items" class="TTNormsPro-Bold">
+            <li class="nav-list-item"><a href="projects.html" class="link-animation noSelect"><span
+                        data-letters="PROJECTS">PROJECTS</span></a></li>
+            <li class="nav-list-item"><a href="studio.html" class="link-animation noSelect"><span
+                        data-letters="STUDIO">STUDIO</span></a></li>
+            <li class="nav-list-item"><a href="contact.html" class="link-animation noSelect"><span
+                        data-letters="CONTACTS">CONTACTS</span></a></li>
+            <div class="flex items-center nav-list-item">
+                <li><a class="link-animation noSelect"><span data-letters="EN">EN</span></a>
+                </li>
+                <li><a href="#" class="link-animation noSelect text-gray-400"><span data-letters="LV"
+                            class="text-gray-400 text-4xl">LV</span></a>
+                </li>
+                <li><a href="#" class="link-animation noSelect"><span data-letters="RU"
+                            class="text-gray-400 text-4xl">RU</span></a>
+                </li>
+            </div>
+        </div>
+    </ul>
+
+    <section class="">
+        <div class="mx-auto pt-24 py-10 text-lg px-6 sm:px-10 lg:px-16 relative max-w-3xl text-muted-black">
+            <h1 class="mb-4 text-4xl TTNormsPro-Bold">Privacy Policy</h1>
+            <h2 class="mb-4 text-2xl TTNormsPro-Bold">What Are Cookies</h2>
+            <p class="mb-6">As is common practice with almost all professional websites this site uses cookies,
+                which
+                are tiny files
+                that
+                are downloaded to your computer, to improve your experience. This page describes what information they
+                gather, how we use it and why we sometimes need to store these cookies. We will also share how you can
+                prevent these cookies from being stored however this may downgrade or 'break' certain elements of the
+                sites
+                functionality.</p>
+            <h2 class="mb-4 text-2xl TTNormsPro-Bold">How We Use Cookies</h2>
+            <p class="mb-4">When you use and access the Service, we may place a number of cookies files in your
+                web
+                browser.
+                We use cookies for the following purposes:</p>
+            <ul class="list-disc padding-inline-start">
+                <li class="mb-4">Cookies Policy / Notice Acceptance Cookies: These Cookies identify if users have
+                    accepted
+                    the use of
+                    cookies on the Website.</li>
+                <li class="mb-6">Tracking and Performance Cookies: These Cookies are used to track information about
+                    traffic
+                    to the
+                    Website and how users use the
+                    Website. The information gathered via these Cookies may directly or indirectly identify you as an
+                    individual visitor. This is because the information collected is typically linked to a pseudonymous
+                    identifier associated with the device you use to access the Website. We may also use these Cookies
+                    to
+                    test new advertisements, pages, features or new functionality of the Website to see how our users
+                    react
+                    to them.</li>
+            </ul>
+
+            <h2 class="mb-4 text-2xl TTNormsPro-Bold">Analytics</h2>
+            <p class="mb-4">
+                We may use third-party Service providers to monitor and analyze the use of our Service.
+            </p>
+            <ul class="list-disc padding-inline-start">
+                <li class="mb-6">Google Analytics is a web analytics service. You can visit their
+                    Privacy
+                    Policy page
+                    here:
+                    <a href="https://support.google.com/analytics/answer/6004245?hl=en" target="_blank"
+                        class="underline hover-opacity break-all">support.google.com/analytics/answer/6004245?hl=en</a>
+                </li>
+            </ul>
+            <h2 class="mb-4 text-2xl TTNormsPro-Bold">Change your preferences</h2>
+            <p class="mb-6">
+                You can change your cookie preferences by pressing <a
+                    class="btn-change-cookie-preferences cursor-pointer underline hover-opacity">here</a>.</p>
+            </p>
+            <h2 class="mb-4 text-2xl TTNormsPro-Bold">Contact Us</h2>
+            <p class="mb-4">
+                If you have any questions about this Privacy Policy, You can contact us: info@letteweb.lv
+            </p>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="bg-gray-nice w-full">
+            <!-- <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(26,32,44,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(26,32,44,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(26,32,44,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#1a202c" />
+                </g>
+            </svg> -->
+        </div>
+        <div class="flex flex-wrap max-w-80 px-6 sm:px-10 lg:px-16  pt-16 pb-10 sm:py-24 text-white"
+            id="footer-container">
+            <div class="item w-full s flex flex-col sm:flex-row">
+                <div class="w-full sm:w-full text-4xl pb-16 sm:pb-0 TTNormsPro-Bold let-space-5">LETTEWEB</div>
+                <div class="w-full sm:w-full flex">
+                    <a href="contact.html" class="mb-auto  text-xl hover-opacity TTNormsPro-Regular ">Get
+                        in touch - Let's make it official.</a>
+                </div>
+            </div>
+            <div class="item w-full  pt-10  flex flex-col-reverse sm:flex-row">
+                <div class="w-full sm:w-full flex flex-col-reverse">
+                    <p class="h-fit mt-2 TTNormsPro-Light"><a class="hover-opacity" href="privacy_policy.html">Privacy
+                            Policy</a> | <a class="cursor-pointer hover-opacity btn-change-cookie-preferences">Cookie
+                            preferences</a></p>
+                    <p class="h-fit mt-auto TTNormsPro-Light">© 2019, Letteweb </p>
+                </div>
+                <div class="w-full sm:w-full flex pb-12 sm:pb-0">
+                    <div class="w-1/2 lg:w-4/12">
+                        <p class="TTNormsPro-Bold text-sm mb-2">Contacts</p>
+                        <a href="#" class="TTNormsPro-Light block w-fit hover-opacity mb-2">Email</a>
+                        <a href="#" class="TTNormsPro-Light block w-fit hover-opacity">Whatsapp</a>
+                    </div>
+                    <div class="w-1/2 lg:w-4/12">
+                        <p class="TTNormsPro-Bold text-sm  mb-2">Follow us</p>
+                        <a href="#" class="TTNormsPro-Light block w-fit mb-2 hover-opacity">Instagram</a>
+                        <a href="#" class="TTNormsPro-Light block w-fit hover-opacity">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="cookie-banner" class="fixed bottom-0 w-full pb-4 px-4 hidden z-50">
+        <div id="cookie-banner-container"
+            class="max-w-80 bg-gray-200 flex rounded-lg py-4 sm:py-2 items-center flex-col sm:flex-row px-4 w-fit">
+            <p class="h-fit text-gray-900">This website uses cookies to ensure you get the best experience on our
+                website. <a href="privacy_policy.html" class="text-gray-700 link-hover">Learn more</a></p>
+            <div class="sm:ml-16 flex mt-2 sm:mt-0">
+                <button id="btn-reject-cookies" class="btn-cc text-gray-900 link-hover">Decline</button>
+                <button id="btn-allow-cookies" class="btn-cc text-white bg-gray-900 ml-4 rounded-lg link-hover">Allow
+                    cookies</button>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="../node_modules/splitting/dist/splitting.min.js"></script> -->
+    <!-- <script src="../node_modules/scroll-out/dist/scroll-out.min.js"></script> -->
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
