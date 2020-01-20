@@ -412,7 +412,7 @@ textarea::-webkit-input-placeholder {
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
     transition: opacity 0.2s ease,
-        transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.4s cubic-bezier(.175, .885, .32, 1),
         color 0.2s ease;
 }
 
@@ -640,15 +640,15 @@ textarea::-webkit-input-placeholder {
     opacity: 0;
     -webkit-transform: translateY(100px);
     transform: translateY(100px);
-    -webkit-transition: opacity 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        -webkit-transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition: opacity 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        -webkit-transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        opacity 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        opacity 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        -webkit-transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -webkit-transition: opacity 1.5s cubic-bezier(.175, .885, .32, 1),
+        -webkit-transform 1s cubic-bezier(.175, .885, .32, 1);
+    transition: opacity 1.5s cubic-bezier(.175, .885, .32, 1),
+        -webkit-transform 1s cubic-bezier(.175, .885, .32, 1);
+    transition: transform 1s cubic-bezier(.175, .885, .32, 1),
+        opacity 1.5s cubic-bezier(.175, .885, .32, 1);
+    transition: transform 1s cubic-bezier(.175, .885, .32, 1),
+        opacity 1.5s cubic-bezier(.175, .885, .32, 1),
+        -webkit-transform 1s cubic-bezier(.175, .885, .32, 1);
     -webkit-transition-delay: 0.2s;
     transition-delay: 0.2s;
 }
@@ -660,7 +660,7 @@ textarea::-webkit-input-placeholder {
     animation-delay: 0.2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-timing-function: cubic-bezier(.175, .885, .32, 1);
 }
 
 /* Fade In Up */
@@ -1241,7 +1241,7 @@ canvas {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: #333;
+    background-color: #7dc359;
     background-image: url("");
     background-repeat: no-repeat;
     background-size: cover;
