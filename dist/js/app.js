@@ -494,6 +494,7 @@ window.onload = function () {
             //     speed: 1.4,
             //     zoom: 1.4
             // });
+            emailjs.init("user_6lWJz8Dg5i8zIDgfKxhsy");
         }
         if (document.getElementById('particles-js')) {
             particlesJS.load('particles-js', 'particlesjs-config.json', function () {
