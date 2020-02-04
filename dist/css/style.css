@@ -11740,6 +11740,14 @@ textarea::-webkit-input-placeholder {
   height: 50%;
 }
 
+.testing::before {
+  content: "01";
+  display: block;
+  font-family: TTNormsPro-Bold;
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Classes */
 
 /* IDs */
