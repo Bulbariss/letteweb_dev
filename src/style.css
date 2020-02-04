@@ -233,10 +233,6 @@ textarea::-webkit-input-placeholder {
     display: block !important;
 }
 
-.visible-imp {
-    visibility: visible !important;
-}
-
 .text-muted-black {
     color: #333333;
 }
@@ -348,6 +344,7 @@ textarea::-webkit-input-placeholder {
     z-index: 2;
 }
 
+#form-main-page .border-red,
 #form-container .border-red {
     border-color: #f56565;
 }

@@ -32,13 +32,13 @@ window.onload = function () {
     // Clear invalid form propery from passed cell
     function invalidInput(id) {
         document.getElementById(`${id}`).classList.add('border-red');
-        document.getElementById(`${id}-p`).classList.add('visible-imp');
+        document.getElementById(`${id}-p`).classList.add('block-imp');
     }
 
     // Set invalid form propery from passed cell
     function validInput(id) {
         document.getElementById(`${id}`).classList.remove('border-red');
-        document.getElementById(`${id}-p`).classList.remove('visible-imp');
+        document.getElementById(`${id}-p`).classList.remove('block-imp');
     }
 
     // Clear all input from cells
@@ -342,7 +342,7 @@ window.onload = function () {
     };
 
     // Validate inputs on focus out
-    if (document.getElementById('particles-js')) {
+    if (document.getElementById('particles-js') || document.getElementById('hero')) {
         IDs.nameID.addEventListener('focusout', validateName);
         IDs.emailID.addEventListener('focusout', validateEmail);
         IDs.subjectID.addEventListener('focusout', validateSubject);
