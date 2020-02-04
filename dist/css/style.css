@@ -11740,8 +11740,24 @@ textarea::-webkit-input-placeholder {
   height: 50%;
 }
 
-.testing::before {
+.before-01::before {
   content: "01";
+  display: block;
+  font-family: TTNormsPro-Bold;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.before-02::before {
+  content: "02";
+  display: block;
+  font-family: TTNormsPro-Bold;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.before-03::before {
+  content: "03";
   display: block;
   font-family: TTNormsPro-Bold;
   font-weight: normal;
