@@ -323,6 +323,10 @@ textarea::-webkit-input-placeholder {
 /* Classes */
 
 /* IDs */
+#mouse-img {
+    height: 90px;
+}
+
 /* #hero {
     background-image: url(../img/bg-main.jpeg);
     background-repeat: no-repeat;
@@ -496,8 +500,8 @@ textarea::-webkit-input-placeholder {
 
 .center-y {
     right: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    -webkit-transform: translateX(+50%);
+    transform: translateX(+50%);
 }
 
 .center-xy {
