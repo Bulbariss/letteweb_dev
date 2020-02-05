@@ -466,6 +466,7 @@ window.onload = function () {
                 el.classList.add("showFadeUp");
             }
         });
+
         ScrollOut({
             once: true,
             targets: '#mooving-letters',
@@ -495,6 +496,20 @@ window.onload = function () {
             //     zoom: 1.4
             // });
             emailjs.init("user_6lWJz8Dg5i8zIDgfKxhsy");
+            ScrollOut({
+                once: true,
+                targets: '.revealFadeRight',
+                onShown(el) {
+                    el.classList.add("showFadeRight");
+                }
+            });
+            ScrollOut({
+                once: true,
+                targets: '.revealFadeLeft',
+                onShown(el) {
+                    el.classList.add("showFadeLeft");
+                }
+            });
         }
         if (document.getElementById('particles-js')) {
             particlesJS.load('particles-js', 'particlesjs-config.json', function () {

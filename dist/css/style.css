@@ -11760,6 +11760,46 @@ textarea::-webkit-input-placeholder {
   font-style: normal;
 }
 
+.anim-delay-03 {
+  -webkit-transition-delay: 0.3s !important;
+          transition-delay: 0.3s !important;
+}
+
+.anim-delay-04 {
+  -webkit-transition-delay: 0.4s !important;
+          transition-delay: 0.4s !important;
+}
+
+.anim-delay-05 {
+  -webkit-transition-delay: 0.5s !important;
+          transition-delay: 0.5s !important;
+}
+
+.anim-delay-06 {
+  -webkit-transition-delay: 0.6s !important;
+          transition-delay: 0.6s !important;
+}
+
+.anim-delay-07 {
+  -webkit-transition-delay: 0.7s !important;
+          transition-delay: 0.7s !important;
+}
+
+.anim-delay-08 {
+  -webkit-transition-delay: 0.8s !important;
+          transition-delay: 0.8s !important;
+}
+
+.anim-delay-09 {
+  -webkit-transition-delay: 0.9s !important;
+          transition-delay: 0.9s !important;
+}
+
+.anim-delay-10 {
+  -webkit-transition-delay: 1s !important;
+          transition-delay: 1s !important;
+}
+
 /* Classes */
 
 /* IDs */
@@ -12213,6 +12253,146 @@ textarea::-webkit-input-placeholder {
 }
 
 /* Fade In Up */
+
+/* Fade In Right */
+
+@-webkit-keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-100px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-100px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.revealFadeRight.showFadeRight {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.revealFadeRight {
+  opacity: 0;
+  -webkit-transform: translateX(-100px);
+  transform: translateX(-100px);
+  -webkit-transition: opacity 1.5s cubic-bezier(.175, .885, .32, 1),
+        -webkit-transform 1s cubic-bezier(.175, .885, .32, 1);
+  transition: opacity 1.5s cubic-bezier(.175, .885, .32, 1),
+        -webkit-transform 1s cubic-bezier(.175, .885, .32, 1);
+  transition: transform 1s cubic-bezier(.175, .885, .32, 1),
+        opacity 1.5s cubic-bezier(.175, .885, .32, 1);
+  transition: transform 1s cubic-bezier(.175, .885, .32, 1),
+        opacity 1.5s cubic-bezier(.175, .885, .32, 1),
+        -webkit-transform 1s cubic-bezier(.175, .885, .32, 1);
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(.175, .885, .32, 1);
+          animation-timing-function: cubic-bezier(.175, .885, .32, 1);
+}
+
+/* Fade In Right */
+
+/* Fade In Left */
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.revealFadeLeft.showFadeLeft {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}
+
+.revealFadeLeft {
+  opacity: 0;
+  -webkit-transform: translateX(100px);
+  transform: translateX(100px);
+  -webkit-transition: opacity 1.5s cubic-bezier(.175, .885, .32, 1),
+        -webkit-transform 1s cubic-bezier(.175, .885, .32, 1);
+  transition: opacity 1.5s cubic-bezier(.175, .885, .32, 1),
+        -webkit-transform 1s cubic-bezier(.175, .885, .32, 1);
+  transition: transform 1s cubic-bezier(.175, .885, .32, 1),
+        opacity 1.5s cubic-bezier(.175, .885, .32, 1);
+  transition: transform 1s cubic-bezier(.175, .885, .32, 1),
+        opacity 1.5s cubic-bezier(.175, .885, .32, 1),
+        -webkit-transform 1s cubic-bezier(.175, .885, .32, 1);
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(.175, .885, .32, 1);
+          animation-timing-function: cubic-bezier(.175, .885, .32, 1);
+}
+
+/* Fade In Left */
 
 /* Glitch Text Effect */
 
