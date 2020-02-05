@@ -461,6 +461,7 @@ window.onload = function () {
         });
         ScrollOut({
             once: true,
+            threshold: 0.3,
             targets: '.revealFadeUp',
             onShown(el) {
                 el.classList.add("showFadeUp");
@@ -498,6 +499,7 @@ window.onload = function () {
             emailjs.init("user_6lWJz8Dg5i8zIDgfKxhsy");
             ScrollOut({
                 once: true,
+                threshold: 0.3,
                 targets: '.revealFadeRight',
                 onShown(el) {
                     el.classList.add("showFadeRight");
@@ -505,6 +507,7 @@ window.onload = function () {
             });
             ScrollOut({
                 once: true,
+                threshold: 0.3,
                 targets: '.revealFadeLeft',
                 onShown(el) {
                     el.classList.add("showFadeLeft");

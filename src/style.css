@@ -727,15 +727,15 @@ textarea::-webkit-input-placeholder {
     transition: transform 1s cubic-bezier(.175, .885, .32, 1),
         opacity 1.5s cubic-bezier(.175, .885, .32, 1),
         -webkit-transform 1s cubic-bezier(.175, .885, .32, 1);
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
 }
 
 .fadeInUp {
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
     animation-duration: 1.5s;
-    animation-delay: 0.2s;
+    animation-delay: 0.4s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(.175, .885, .32, 1);
@@ -791,15 +791,15 @@ textarea::-webkit-input-placeholder {
     transition: transform 1s cubic-bezier(.175, .885, .32, 1),
         opacity 1.5s cubic-bezier(.175, .885, .32, 1),
         -webkit-transform 1s cubic-bezier(.175, .885, .32, 1);
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
 }
 
 .fadeInRight {
     -webkit-animation-name: fadeInRight;
     animation-name: fadeInRight;
     animation-duration: 1.5s;
-    animation-delay: 0.2s;
+    animation-delay: 0.4s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(.175, .885, .32, 1);
@@ -855,15 +855,15 @@ textarea::-webkit-input-placeholder {
     transition: transform 1s cubic-bezier(.175, .885, .32, 1),
         opacity 1.5s cubic-bezier(.175, .885, .32, 1),
         -webkit-transform 1s cubic-bezier(.175, .885, .32, 1);
-    -webkit-transition-delay: 0.2s;
-    transition-delay: 0.2s;
+    -webkit-transition-delay: 0.4s;
+    transition-delay: 0.4s;
 }
 
 .fadeInLeft {
     -webkit-animation-name: fadeInLeft;
     animation-name: fadeInLeft;
     animation-duration: 1.5s;
-    animation-delay: 0.2s;
+    animation-delay: 0.4s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(.175, .885, .32, 1);
