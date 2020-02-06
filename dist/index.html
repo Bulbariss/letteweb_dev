@@ -76,7 +76,7 @@
                 class="btn-cc mt-8 text-white bg-gray-900 rounded-lg link-hover w-fit px-8 sm:mx-auto">Write to
                 us</a>
         </div>
-        <img src="img/mouse.svg" class="absolute bottom-0 center-y" id="mouse-img" alt="">
+        <img src="img/mouse.svg" class="absolute bottom-0 center-y z-10" id="mouse-img" alt="">
     </section>
 
     <section id="what-we-do" class="min-h-screen bg-gray-100  flex">
@@ -237,6 +237,20 @@
                 </form>
             </div>
         </div>
+        <div class="w-full">
+            <svg class="waves bg-gray-200 absolute bottom-0" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" fill="rgba(26,32,44,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(26,32,44,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(26,32,44,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#1a202c" />
+                </g>
+            </svg>
+        </div>
     </section>
 
 
@@ -279,21 +293,7 @@
     </section> -->
 
     <section id="footer">
-        <div class="bg-gray-200 w-full">
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                <defs>
-                    <path id="gentle-wave"
-                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                </defs>
-                <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(26,32,44,0.7" />
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(26,32,44,0.5)" />
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(26,32,44,0.3)" />
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#1a202c" />
-                </g>
-            </svg>
-        </div>
+        
         <div class="flex flex-wrap max-w-80 px-6 sm:px-10 lg:px-16  pt-16 pb-10 sm:py-24 text-white"
             id="footer-container">
             <div class="item w-full s flex flex-col sm:flex-row">

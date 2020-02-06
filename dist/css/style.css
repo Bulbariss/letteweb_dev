@@ -14562,7 +14562,6 @@ textarea::-webkit-input-placeholder {
   position: relative;
   height: 20vh;
   text-align: center;
-  background-color: white;
 }
 
 .parallax>use {
@@ -14622,16 +14621,13 @@ textarea::-webkit-input-placeholder {
 
 @media (max-width: 768px) {
   .waves {
+    margin-bottom: -9px;
     height: 40px;
     min-height: 40px;
   }
 
   .content {
     height: 30vh;
-  }
-
-  h1 {
-    font-size: 24px;
   }
 }
 
