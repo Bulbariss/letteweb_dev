@@ -461,11 +461,8 @@ window.onload = function () {
         });
         ScrollOut({
             once: true,
-            threshold: 0.3,
-            targets: '.revealFadeUp',
-            onShown(el) {
-                el.classList.add("showFadeUp");
-            }
+            threshold: 0.2,
+            targets: '.animated',
         });
 
         ScrollOut({
@@ -497,22 +494,6 @@ window.onload = function () {
             //     zoom: 1.4
             // });
             emailjs.init("user_6lWJz8Dg5i8zIDgfKxhsy");
-            ScrollOut({
-                once: true,
-                threshold: 0.3,
-                targets: '.revealFadeRight',
-                onShown(el) {
-                    el.classList.add("showFadeRight");
-                }
-            });
-            ScrollOut({
-                once: true,
-                threshold: 0.3,
-                targets: '.revealFadeLeft',
-                onShown(el) {
-                    el.classList.add("showFadeLeft");
-                }
-            });
         }
         if (document.getElementById('particles-js')) {
             particlesJS.load('particles-js', 'particlesjs-config.json', function () {
