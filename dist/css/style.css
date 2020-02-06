@@ -14549,7 +14549,7 @@ textarea::-webkit-input-placeholder {
 /* Waves */
 
 .waves {
-  border-color: #1a202c;
+  transform: translateY(1px);
   width: 100%;
   height: 10vh;
   margin-bottom: -7px;
