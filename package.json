@@ -11,6 +11,6 @@
   "dependencies": {
     "scroll-out": "^2.2.7",
     "splitting": "^1.0.6",
-    "tailwindcss": "^1.1.4"
+    "tailwindcss": "^1.2.0"
   }
 }
