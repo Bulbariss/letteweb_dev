@@ -40,20 +40,20 @@ input {
 
 input::placeholder,
 textarea::placeholder {
-    color: #333;
+    color: #52606D;
     /* color: #3C4859; */
 
 }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-    color: #333;
+    color: #52606D;
     line-height: 1.5;
 }
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-    color: #333;
+    color: #52606D;
     line-height: 1.5;
 }
 
@@ -367,12 +367,12 @@ textarea::-webkit-input-placeholder {
     height: 90px;
 }
 
-/* #hero {
+#hero {
     background-image: url(../img/bg-main.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-} */
+}
 
 #studio-hero {
     background-image: url(../img/bg-studio.jpg);
@@ -399,6 +399,10 @@ textarea::-webkit-input-placeholder {
 
 #footer {
     background-color: #1a202c;
+}
+
+#footer.bg-indigo-1000 {
+    background-color: #3A3462;
 }
 
 .hover-opacity:hover {
@@ -1161,8 +1165,8 @@ select {
     height: 38px;
     padding: 6px 10px;
     /* The 6px vertically centers text on FF, ignored by Webkit */
-    background-color: #fff;
-    border: 1px solid #D1D1D1;
+    background-color: #fcfbfb;
+    border: 2px solid #e2e5e8;
     border-radius: 4px;
     box-shadow: none;
     box-sizing: border-box;
@@ -1197,7 +1201,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-    border: 1px solid #1E1E23;
+    border: 2px solid #3E4C59;
     outline: 0;
 }
 
