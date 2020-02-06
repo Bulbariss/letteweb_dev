@@ -607,12 +607,8 @@ textarea::-webkit-input-placeholder {
 @media (max-width: 768px) {
     .waves {
         margin-bottom: -9px;
-        height: 40px;
-        min-height: 40px;
-    }
-
-    .content {
-        height: 30vh;
+        height: 60px;
+        min-height: 60px;
     }
 }
 
