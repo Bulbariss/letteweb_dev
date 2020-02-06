@@ -320,6 +320,46 @@ textarea::-webkit-input-placeholder {
     font-style: normal;
 }
 
+.before-04::before {
+    content: "04";
+    display: block;
+    font-family: TTNormsPro-Bold;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.before-05::before {
+    content: "05";
+    display: block;
+    font-family: TTNormsPro-Bold;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.before-06::before {
+    content: "06";
+    display: block;
+    font-family: TTNormsPro-Bold;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.before-07::before {
+    content: "07";
+    display: block;
+    font-family: TTNormsPro-Bold;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.before-08::before {
+    content: "08";
+    display: block;
+    font-family: TTNormsPro-Bold;
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Classes */
 
 /* IDs */

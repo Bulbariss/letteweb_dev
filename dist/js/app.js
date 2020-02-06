@@ -445,7 +445,7 @@ window.onload = function () {
         getFinalStrings();
         setTimeout(() => {
             setInterval(swapText, 60);
-        }, 800);
+        }, 500);
     }
 
     // Mooving letters
