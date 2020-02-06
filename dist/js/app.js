@@ -483,16 +483,16 @@ window.onload = function () {
         });
         initCookies();
         if (document.getElementById('hero')) {
-            // VANTA.FOG({
-            //     el: "#hero",
-            //     highlightColor: 0x4299e1,
-            //     midtoneColor: 0xffffff,
-            //     lowlightColor: 0xffffff,
-            //     baseColor: 0xffffff,
-            //     blurFactor: 0.6,
-            //     speed: 1.4,
-            //     zoom: 1.4
-            // });
+            VANTA.FOG({
+                el: "#hero",
+                highlightColor: 0x4299e1,
+                midtoneColor: 0xffffff,
+                lowlightColor: 0xffffff,
+                baseColor: 0xffffff,
+                blurFactor: 0.6,
+                speed: 1.4,
+                zoom: 1.4
+            });
             emailjs.init("user_6lWJz8Dg5i8zIDgfKxhsy");
         }
         if (document.getElementById('particles-js')) {
