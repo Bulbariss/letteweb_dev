@@ -673,12 +673,7 @@ textarea::-webkit-input-placeholder {
 /* IDs */
 
 /* Animation */
-.animated.FadeLeft,
-.animated.FadeRight,
-.animated.FadeUp,
-.animated.sm\:FadeLeft,
-.animated.sm\:FadeRight,
-.animated.sm\:FadeUp {
+.animated {
     opacity: 0;
     -webkit-transition: opacity 1.5s cubic-bezier(.175, .885, .32, 1),
         -webkit-transform 1s cubic-bezier(.175, .885, .32, 1);
@@ -1320,6 +1315,30 @@ canvas {
     .sm\:FadeLeft {
         -webkit-transform: translateX(100px);
         transform: translateX(100px);
+    }
+
+    .sm\:anim-delay-05 {
+        transition-delay: 0.5s !important;
+    }
+
+    .sm\:anim-delay-06 {
+        transition-delay: 0.6s !important;
+    }
+
+    .sm\:anim-delay-07 {
+        transition-delay: 0.7s !important;
+    }
+
+    .sm\:anim-delay-08 {
+        transition-delay: 0.8s !important;
+    }
+
+    .sm\:anim-delay-09 {
+        transition-delay: 0.9s !important;
+    }
+
+    .sm\:anim-delay-10 {
+        transition-delay: 1s !important;
     }
 }
 
