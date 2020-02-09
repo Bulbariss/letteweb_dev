@@ -463,6 +463,9 @@ window.onload = function () {
             once: true,
             threshold: 0.2,
             targets: '.animated',
+            onShown: function (el) {
+                el.classList.add('anim');
+            }
         });
 
         ScrollOut({

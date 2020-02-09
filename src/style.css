@@ -707,11 +707,7 @@ textarea::-webkit-input-placeholder {
     transition-delay: 0.4s;
 }
 
-.animated[data-scroll="in"] {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-}
+
 
 .FadeUp {
     -webkit-transform: translateY(100px);
@@ -726,6 +722,12 @@ textarea::-webkit-input-placeholder {
 .FadeLeft {
     -webkit-transform: translateX(100px);
     transform: translateX(100px);
+}
+
+.animated.anim {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
 
 .anim-delay-05 {
