@@ -156,6 +156,14 @@ textarea::-webkit-input-placeholder {
     padding: 0.625rem 1.5rem;
 }
 
+.active-nav {
+    border-bottom: 2px solid;
+}
+
+.link-animation:hover .active-nav {
+    border-bottom: 2px solid #ffffff;
+}
+
 .justify-self-center {
     justify-self: center;
 }
@@ -363,6 +371,16 @@ textarea::-webkit-input-placeholder {
 /* Classes */
 
 /* IDs */
+
+#arrow-studio-page {
+    width: 40px;
+    height: auto;
+}
+
+#arrow-studio-page:hover {
+    fill: #6C83EA;
+}
+
 #mouse-img {
     height: 90px;
 }
@@ -1246,7 +1264,7 @@ canvas {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: #7dc359;
+    background-color: #E4E7EB;
     background-image: url("");
     background-repeat: no-repeat;
     background-size: cover;
@@ -1363,6 +1381,10 @@ canvas {
     #blob-bottom {
         height: 50vh;
         bottom: -8%;
+    }
+
+    #arrow-studio-page {
+        width: 50px;
     }
 }
 
