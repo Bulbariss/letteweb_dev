@@ -21,21 +21,24 @@
     <section id="navbar" class="fixed w-full">
         <div class="max-w-80 flex mx-auto h-full items-center px-6 sm:px-10 lg:px-16 relative">
             <div class="logo mr-auto w-auto h-auto TTNormsPro-ExtraBold">
-                <a class="text-2xl let-space-3" href="index.html">LETTEWEB</a>
+                <a class="text-2xl let-space-3" href="">LETTEWEB</a>
             </div>
-            <div class="ml-auto w-auto h-auto text-sm  hidden sm:flex TTNormsPro-Bold">
-                <a href="projects.html" class="link-animation noSelect px-4 py-3"><span
+            <div class="ml-auto w-auto h-auto text-sm  hidden sm:flex TTNormsPro-Bold ">
+                <a href="projects.html" class="link-animation noSelect px-4 py-3"><span class="leading-tight"
                         data-letters="PROJECTS">PROJECTS</span></a>
-                <a href="studio.html" class="link-animation noSelect px-4 py-3"><span
+                <a href="studio.html" class="link-animation noSelect px-4 py-3"><span class="leading-tight"
                         data-letters="STUDIO">STUDIO</span></a>
                 <a href="contact.html" class="link-animation noSelect px-4 py-3"><span data-letters="CONTACT"
-                        class="noSelect">CONTACT</span></a>
-                <a id="toggle-lang-list" class="link-animation noSelect px-4 py-3"><span data-letters="EN">EN</span></a>
+                        class="leading-tight">CONTACT</span></a>
+                <a id="toggle-lang-list" class="link-animation noSelect px-4 py-3"><span class="leading-tight"
+                        data-letters="EN">EN</span></a>
             </div>
-            <div class="flex hidden sm:flex flex-col absolute right-0 mx-6 sm:mx-10 lg:mx-16 text-sm TTNormsPro-Bold invisible"
+            <div class="flex hidden sm:flex flex-col absolute right-0 mx-6 sm:mx-10 lg:mx-16 text-sm TTNormsPro-Bold invisible leading-tight"
                 id="lang-list">
-                <a href="#" class="link-animation noSelect px-4 py-3 "><span data-letters="LV">LV</span></a>
-                <a href="#" class="link-animation noSelect px-4 py-3"><span data-letters="RU">RU</span></a>
+                <a href="#" class="link-animation noSelect px-4 py-3 "><span class="leading-tight"
+                        data-letters="LV">LV</span></a>
+                <a href="#" class="link-animation noSelect px-4 py-3"><span class="leading-tight"
+                        data-letters="RU">RU</span></a>
             </div>
             <div id="menuToggle" class="block sm:hidden">
                 <input type="checkbox" id="checkbox" class="checkbox">
@@ -124,7 +127,7 @@
         </div>
     </section>
 
-    <section id="footer">
+    <section id="footer" class="bg-indigo-1000">
         <div class="flex flex-wrap max-w-80 px-6 sm:px-10 lg:px-16  pt-16 pb-10 sm:py-24 text-white"
             id="footer-container">
             <div class="item w-full s flex flex-col sm:flex-row">
@@ -136,21 +139,21 @@
             </div>
             <div class="item w-full  pt-10  flex flex-col-reverse sm:flex-row">
                 <div class="w-full sm:w-full flex flex-col-reverse">
-                    <p class="h-fit mt-2 TTNormsPro-Light"><a class="hover-opacity" href="privacy_policy.html">Privacy
+                    <p class="h-fit mt-2 "><a class="hover-opacity" href="privacy_policy.html">Privacy
                             Policy</a> | <a class="cursor-pointer hover-opacity btn-change-cookie-preferences">Cookie
                             preferences</a></p>
-                    <p class="h-fit mt-auto TTNormsPro-Light">© 2019, Letteweb </p>
+                    <p class="h-fit mt-auto ">© 2019, Letteweb </p>
                 </div>
                 <div class="w-full sm:w-full flex pb-12 sm:pb-0">
                     <div class="w-1/2 lg:w-4/12">
                         <p class="TTNormsPro-Bold text-sm mb-2">Contacts</p>
-                        <a href="#" class="TTNormsPro-Light block w-fit hover-opacity mb-2">Email</a>
-                        <a href="#" class="TTNormsPro-Light block w-fit hover-opacity">Whatsapp</a>
+                        <a href="#" class="block w-fit hover-opacity mb-2">Email</a>
+                        <a href="#" class="block w-fit hover-opacity">Whatsapp</a>
                     </div>
                     <div class="w-1/2 lg:w-4/12">
                         <p class="TTNormsPro-Bold text-sm  mb-2">Follow us</p>
-                        <a href="#" class="TTNormsPro-Light block w-fit mb-2 hover-opacity">Instagram</a>
-                        <a href="#" class="TTNormsPro-Light block w-fit hover-opacity">Facebook</a>
+                        <a href="#" class="block w-fit mb-2 hover-opacity">Instagram</a>
+                        <a href="#" class="block w-fit hover-opacity">Facebook</a>
                     </div>
                 </div>
             </div>
@@ -159,12 +162,17 @@
 
     <div id="cookie-banner" class="fixed bottom-0 w-full pb-4 px-4 hidden z-50">
         <div id="cookie-banner-container"
-            class="max-w-80 bg-gray-200 flex rounded-lg py-4 sm:py-2 items-center flex-col sm:flex-row px-4 w-fit">
-            <p class="h-fit text-gray-900">This website uses cookies to ensure you get the best experience on our
-                website. <a href="privacy_policy.html" class="text-gray-700 link-hover">Learn more</a></p>
+            class="max-w-80 bg-indigo-200 flex rounded-lg py-4 sm:py-2 items-center flex-col sm:flex-row px-4 w-fit ">
+            <p class="h-fit text-coolGray-900">This website uses cookies to ensure you get the best experience on our
+                website. <a href="privacy_policy.html" class="text-coolGray-600 hover:text-coolGray-400 underline">
+                    Learn
+                    more</a>
+            </p>
             <div class="sm:ml-16 flex mt-2 sm:mt-0">
-                <button id="btn-reject-cookies" class="btn-cc text-gray-900 link-hover">Decline</button>
-                <button id="btn-allow-cookies" class="btn-cc text-white bg-gray-900 ml-4 rounded-lg link-hover">Allow
+                <button id="btn-reject-cookies"
+                    class="btn-cc text-coolGray-800 hover:text-coolGray-600">Decline</button>
+                <button id="btn-allow-cookies"
+                    class="btn-cc text-white bg-indigo-700 hover:bg-indigo-600 ml-4 rounded-lg ">Allow
                     cookies</button>
             </div>
         </div>
