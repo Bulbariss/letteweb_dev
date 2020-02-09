@@ -458,17 +458,13 @@ textarea::-webkit-input-placeholder {
 }
 
 #menuToggle .checkbox:checked+.label::before {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+    transform: translateY(6px) rotate(45deg);
     transform-origin: center;
-    top: 0.8rem;
 }
 
 #menuToggle .checkbox:checked+.label::after {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    transform: translateY(-6px) rotate(-45deg);
     transform-origin: center;
-    top: 0.8rem;
 }
 
 /* Menu toggle */
