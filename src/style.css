@@ -431,8 +431,8 @@ textarea::-webkit-input-placeholder {
 #menuToggle .label {
     position: relative;
     display: block;
-    height: 1.6rem;
-    width: 2rem;
+    height: 26px;
+    width: 32px;
     cursor: pointer;
     z-index: 2;
 }
@@ -450,11 +450,11 @@ textarea::-webkit-input-placeholder {
 }
 
 #menuToggle .label::before {
-    top: 0.4rem;
+    top: 6px;
 }
 
 #menuToggle .label::after {
-    top: 1.2rem;
+    top: 18px;
 }
 
 #menuToggle .checkbox:checked+.label::before {

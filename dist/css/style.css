@@ -15360,8 +15360,8 @@ textarea::-webkit-input-placeholder {
 #menuToggle .label {
   position: relative;
   display: block;
-  height: 1.6rem;
-  width: 2rem;
+  height: 26px;
+  width: 32px;
   cursor: pointer;
   z-index: 2;
 }
@@ -15379,27 +15379,21 @@ textarea::-webkit-input-placeholder {
 }
 
 #menuToggle .label::before {
-  top: 0.4rem;
+  top: 6px;
 }
 
 #menuToggle .label::after {
-  top: 1.2rem;
+  top: 18px;
 }
 
 #menuToggle .checkbox:checked+.label::before {
-  /* -webkit-transform: rotate(45deg); */
-  /* transform: rotate(45deg); */
   transform: translateY(6px) rotate(45deg);
   transform-origin: center;
-  /* top: 0.8rem; */
 }
 
 #menuToggle .checkbox:checked+.label::after {
-  /* -webkit-transform: rotate(-45deg); */
-  /* transform: ; */
   transform: translateY(-6px) rotate(-45deg);
   transform-origin: center;
-  /* top: 0.8rem; */
 }
 
 /* Menu toggle */
