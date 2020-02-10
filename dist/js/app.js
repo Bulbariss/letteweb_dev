@@ -112,6 +112,7 @@ window.onload = function () {
     // Show success message
     function showSuccess() {
         document.getElementById('contact-submit-btn').classList.add('bg-green-500');
+        document.getElementById('contact-submit-btn').classList.remove('bg-indigo-700');
         document.getElementById('contact-submit-btn').classList.add('pointer-events-none');
         document.getElementById('contact-submit-btn').classList.add('select-none');
         document.getElementById('contact-submit-btn').disabled = true;
@@ -120,6 +121,7 @@ window.onload = function () {
         document.getElementById('contact-submit-btn-success').classList.add('block-imp');
         setTimeout(() => {
             document.getElementById('contact-submit-btn-success').classList.remove('block-imp');
+            document.getElementById('contact-submit-btn').classList.add('bg-indigo-700');
             document.getElementById('contact-submit-btn').classList.remove('bg-green-500');
             document.getElementById('contact-submit-btn').classList.remove('select-none');
             document.getElementById('contact-submit-btn-text').classList.remove('hidden');
@@ -134,6 +136,7 @@ window.onload = function () {
     function showError() {
         // show failure 
         document.getElementById('contact-submit-btn').classList.add('bg-red-500');
+        document.getElementById('contact-submit-btn').classList.remove('bg-indigo-700');
         document.getElementById('contact-submit-btn').classList.add('pointer-events-none');
         document.getElementById('contact-submit-btn').classList.add('select-none');
         document.getElementById('contact-submit-btn').disabled = true;
@@ -142,6 +145,7 @@ window.onload = function () {
         document.getElementById('contact-submit-btn-error').classList.add('block-imp');
         setTimeout(() => {
             document.getElementById('contact-submit-btn-error').classList.remove('block-imp');
+            document.getElementById('contact-submit-btn').classList.add('bg-indigo-700');
             document.getElementById('contact-submit-btn').classList.remove('bg-red-500');
             document.getElementById('contact-submit-btn').classList.remove('select-none');
             document.getElementById('contact-submit-btn-text').classList.remove('hidden');
@@ -445,7 +449,7 @@ window.onload = function () {
         getFinalStrings();
         setTimeout(() => {
             setInterval(swapText, 60);
-        }, 500);
+        }, 100);
     }
 
     // Mooving letters

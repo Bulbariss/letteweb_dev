@@ -4,11 +4,16 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build:css": "tailwind build src/style.css -o dist/css/style.css"
+    "build:css": "tailwind build src/style.css -o dist/css/style.css",
+    "build:postcss": "postcss  dist/css/style.css -o dist/css/style.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.0.6",
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
+    "postcss": "^7.0.26",
     "scroll-out": "^2.2.7",
     "splitting": "^1.0.6",
     "tailwindcss": "^1.2.0"
