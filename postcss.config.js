@@ -10,7 +10,7 @@ module.exports = {
         }),
         purgecss({
             content: ['./dist/*.html', './dist/js/app.js'],
-            whitelistPatternsChildren: [/sym-\d?\d/g],
+            whitelistPatterns: [/sym-\d?\d/g],
             defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
         })
     ]
