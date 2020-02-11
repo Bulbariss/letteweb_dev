@@ -191,23 +191,20 @@
                     contentType: false,
                     cache: false,
                     processData: false,
-                    success: function () {
-
+                    success: function (response) {
+                        console.log('123')
+                        var xmlhttp = new XMLHttpRequest();
+                        xmlhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                console.log(this.response)
+                                // var myObj = JSON.parse(this.responseText);
+                                // document.getElementById("demo").innerHTML = myObj.name;
+                            }
+                        };
+                        xmlhttp.open("GET", "phpmailer/mail.php", true);
+                        xmlhttp.send();
                     }
                 });
-                setTimeout(() => {
-                    console.log('!')
-                    var xmlhttp = new XMLHttpRequest();
-                    xmlhttp.onreadystatechange = function () {
-                        if (this.readyState == 4 && this.status == 200) {
-                            console.log(this)
-                            // var myObj = JSON.parse(this.responseText);
-                            // document.getElementById("demo").innerHTML = myObj.name;
-                        }
-                    };
-                    xmlhttp.open("GET", "phpmailer/mail.php", true);
-                    xmlhttp.send();
-                }, 4000);
             });
 
         });
