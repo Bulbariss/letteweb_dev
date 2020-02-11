@@ -41,7 +41,17 @@ function smtpmailer($to, $from, $from_name, $subject, $body)
     $name = 'tets';
     $subj = 'PHPMailer 5.2 testing from DomainRacer';
     $msg = 'This is mail about testing mailing using PHP.';
-    
+//     $msg = "";
+
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// //   $name = test_input($_POST["name"]);
+// //   $email = test_input($_POST["email"]);
+// //   $website = test_input($_POST["website"]);
+// //   $comment = test_input($_POST["comment"]);
+// //   $gender = test_input($_POST["gender"]);
+//      $msg = test_input($_POST["msg"]);
+// }
+
     $error=smtpmailer($to,$from, $name ,$subj, $msg);
     
 ?>
