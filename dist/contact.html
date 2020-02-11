@@ -39,6 +39,7 @@
                 <input type="checkbox" id="checkbox" class="checkbox">
                 <label for="checkbox" class="label"></label>
             </div>
+        </div>
     </section>
     <ul id="menu">
         <div id="menu-items" class="TTNormsPro-Bold">
@@ -77,29 +78,33 @@
                     </div>
                 </div>
                 <div id="form-container" class="p-4 sm:p-6 w-full">
-                    <form id="contact-form">
+                    <form id="contact-form" action="phpmailer/send.php" method="post">
                         <div id="name-input" class="w-full  pb-2">
                             <label class="text-left block" for="input-name">Your Name</label>
-                            <input class="w-full d-flex mb-1" type="text" placeholder="Your Name" id="input-name">
+                            <input class="w-full d-flex mb-1" type="text" placeholder="Your Name" id="input-name"
+                                value="<?php echo $name; ?>">
                             <p class="text-xs text-red-600 hidden" id="input-name-p">Enter valid name</p>
                         </div>
                         <div id="email-input" class="w-full  pb-2">
                             <label class="text-left block" for="input-email">Your Email</label>
-                            <input class="w-full mb-1 " type="text" placeholder="Your Email" id="input-email">
+                            <input class="w-full mb-1 " type="text" placeholder="Your Email" id="input-email"
+                                value="<?php echo $email; ?>">
                             <p class="text-xs text-red-600 hidden" id="input-email-p">Enter valid email</p>
                         </div>
                         <div id="subject-input" class=" w-full pb-2">
                             <label class="text-left block" for="input-subject">Subject</label>
-                            <input class="w-full d-flex mb-1" type="text" placeholder="Subject" id="input-subject">
+                            <input class="w-full d-flex mb-1" type="text" placeholder="Subject" id="input-subject"
+                                value="<?php echo $subject; ?>">
                             <p class="text-xs text-red-600 hidden" id="input-subject-p">Enter subject</p>
                         </div>
                         <div id="message-input" class=" w-full pb-2">
                             <label class="text-left block" for="input-message">Message</label>
-                            <textarea class="w-full " placeholder="Message" id="input-message"></textarea>
+                            <textarea class="w-full " placeholder="Message" id="input-message"
+                                value="<?php echo $msg; ?>"></textarea>
                             <p class="text-xs text-red-600 hidden" id="input-message-p">Enter message</p>
                         </div>
                         <button id="contact-submit-btn" class="btn-skeleton bg-indigo-700 hover:bg-indigo-600 text-white w-full text-base
-                        cursor-not-allowed" type="submit">
+                        cursor-not-allowed">
                             <p class="text-base" id="contact-submit-btn-text">Submit</p>
                             <p class="text-base hidden" id="contact-submit-btn-success">Message sent</p>
                             <p class="text-base hidden" id="contact-submit-btn-error">Error, message not sent</p>
@@ -110,6 +115,7 @@
                                 <div></div>
                             </div>
                         </button>
+                        <button id="btn-send-email" type="submit"></button>
                     </form>
                 </div>
             </div>
@@ -117,24 +123,6 @@
         <div id="particles-js">
         </div>
     </section>
-
-
-    <!-- <section class="relative">
-        <div class="w-full absolute bottom-0">
-            <svg class="waves bg-transparent" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
-                <defs>
-                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
-                </defs>
-                <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="48" fill="rgba(58,52,98,0.7" />
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(58,52,98,0.5)" />
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(58,52,98,0.3)" />
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#3A3462" />
-                </g>
-            </svg>
-        </div>
-    </section> -->
 
     <section id="footer" class="bg-indigo-1000">
         <div class="flex flex-wrap max-w-80 px-6 sm:px-10 lg:px-16  pt-16 pb-10 sm:py-24 text-white"

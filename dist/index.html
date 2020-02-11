@@ -2,129 +2,138 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
-    <link rel="stylesheet" href="css/style.css">
-    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js">
-    </script>
-
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+  <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+  <title>Document</title>
 </head>
 
 <body class="">
-    <section id="navbar" class="fixed w-full">
-        <div class="max-w-80 flex mx-auto h-full items-center px-6 sm:px-10 lg:px-16 relative">
-            <div class="logo mr-auto w-auto h-auto TTNormsPro-ExtraBold">
-                <a class="text-2xl let-space-3" href="">LETTEWEB</a>
-            </div>
-            <div class="ml-auto w-auto h-auto text-sm  hidden sm:flex TTNormsPro-Bold ">
-                <a href="projects.html" class="link-animation noSelect px-4 py-3"><span class="leading-tight"
-                        data-letters="PROJECTS">PROJECTS</span></a>
-                <a href="studio.html" class="link-animation noSelect px-4 py-3"><span class="leading-tight"
-                        data-letters="STUDIO">STUDIO</span></a>
-                <a href="contact.html" class="link-animation noSelect px-4 py-3"><span data-letters="CONTACT"
-                        class="leading-tight">CONTACT</span></a>
-                <a id="toggle-lang-list" class="link-animation noSelect px-4 py-3"><span class="leading-tight"
-                        data-letters="EN">EN</span></a>
-            </div>
-            <div class="flex hidden sm:flex flex-col absolute right-0 mx-6 sm:mx-10 lg:mx-16 text-sm TTNormsPro-Bold invisible leading-tight"
-                id="lang-list">
-                <a href="#" class="link-animation noSelect px-4 py-3 "><span class="leading-tight"
-                        data-letters="LV">LV</span></a>
-                <a href="#" class="link-animation noSelect px-4 py-3"><span class="leading-tight"
-                        data-letters="RU">RU</span></a>
-            </div>
-            <div id="menuToggle" class="block sm:hidden">
-                <input type="checkbox" id="checkbox" class="checkbox">
-                <label for="checkbox" class="label"></label>
-            </div>
-    </section>
-    <ul id="menu">
-        <div id="menu-items" class="TTNormsPro-Bold">
-            <li class="nav-list-item"><a href="projects.html" class="link-animation noSelect"><span
-                        data-letters="PROJECTS">PROJECTS</span></a></li>
-            <li class="nav-list-item"><a href="studio.html" class="link-animation noSelect"><span
-                        data-letters="STUDIO">STUDIO</span></a></li>
-            <li class="nav-list-item"><a href="contact.html" class="link-animation noSelect"><span
-                        data-letters="CONTACTS">CONTACTS</span></a></li>
-            <div class="flex items-center nav-list-item">
-                <li><a class="link-animation noSelect"><span data-letters="EN">EN</span></a>
-                </li>
-                <li><a href="#" class="link-animation noSelect"><span data-letters="LV"
-                            class="text-coolGray-400 text-4xl">LV</span></a>
-                </li>
-                <li><a href="#" class="link-animation noSelect"><span data-letters="RU"
-                            class="text-coolGray-400 text-4xl">RU</span></a>
-                </li>
-            </div>
-        </div>
-    </ul>
+  <section id="navbar" class="fixed w-full">
+    <div class="max-w-80 flex mx-auto h-full items-center px-6 sm:px-10 lg:px-16 relative">
+      <div class="logo mr-auto w-auto h-auto TTNormsPro-ExtraBold">
+        <a class="text-2xl let-space-3" href="">LETTEWEB</a>
+      </div>
+      <div class="ml-auto w-auto h-auto text-sm  hidden sm:flex TTNormsPro-Bold ">
+        <a href="projects.html" class="link-animation noSelect px-4 py-3"><span class="leading-tight"
+            data-letters="PROJECTS">PROJECTS</span></a>
+        <a href="studio.html" class="link-animation noSelect px-4 py-3"><span class="leading-tight"
+            data-letters="STUDIO">STUDIO</span></a>
+        <a href="contact.html" class="link-animation noSelect px-4 py-3"><span data-letters="CONTACT"
+            class="leading-tight">CONTACT</span></a>
+        <a id="toggle-lang-list" class="link-animation noSelect px-4 py-3"><span class="leading-tight"
+            data-letters="EN">EN</span></a>
+      </div>
+      <div
+        class="flex hidden sm:flex flex-col absolute right-0 mx-6 sm:mx-10 lg:mx-16 text-sm TTNormsPro-Bold invisible leading-tight"
+        id="lang-list">
+        <a href="#" class="link-animation noSelect px-4 py-3 "><span class="leading-tight"
+            data-letters="LV">LV</span></a>
+        <a href="#" class="link-animation noSelect px-4 py-3"><span class="leading-tight"
+            data-letters="RU">RU</span></a>
+      </div>
+      <div id="menuToggle" class="block sm:hidden">
+        <input type="checkbox" id="checkbox" class="checkbox" />
+        <label for="checkbox" class="label"></label>
+      </div>
+    </div>
+  </section>
 
-    <section id="hero" class="min-h-screen bg-white flex">
-        <div class="px-6 py-12 sm:px-10 lg:px-16 w-full mx-auto self-center max-w-80 w-fit text-left sm:text-center ">
-            <h1 class="TTNormsPro-Bold text-4xl mt-0 sm:mt-12 md:text-5xl lg:text-6xl max-w-4xl leading-none mx-auto">
-                New generation of web development
-            </h1>
-            <p class="mt-4 text-2xl md:text-2xl lg:text-3xl  leading-relaxed TTNormsPro-Light max-w-xl mx-auto">
-                We create websites for businesses that provide great experience for their users.
-            </p>
-            <a href="contact.html" class="btn-cc btn-lg mt-8 text-white bg-indigo-700 rounded-lg transform hover:scale-105 hover:bg-indigo-600 ease-in
+  <ul id="menu">
+    <div id="menu-items" class="TTNormsPro-Bold">
+      <li class="nav-list-item">
+        <a href="projects.html" class="link-animation noSelect"><span data-letters="PROJECTS">PROJECTS</span></a>
+      </li>
+      <li class="nav-list-item">
+        <a href="studio.html" class="link-animation noSelect"><span data-letters="STUDIO">STUDIO</span></a>
+      </li>
+      <li class="nav-list-item">
+        <a href="contact.html" class="link-animation noSelect"><span data-letters="CONTACTS">CONTACTS</span></a>
+      </li>
+      <div class="flex items-center nav-list-item">
+        <li>
+          <a class="link-animation noSelect"><span data-letters="EN">EN</span></a>
+        </li>
+        <li>
+          <a href="#" class="link-animation noSelect"><span data-letters="LV"
+              class="text-coolGray-400 text-4xl">LV</span></a>
+        </li>
+        <li>
+          <a href="#" class="link-animation noSelect"><span data-letters="RU"
+              class="text-coolGray-400 text-4xl">RU</span></a>
+        </li>
+      </div>
+    </div>
+  </ul>
+
+  <section id="hero" class="min-h-screen bg-white flex">
+    <div class="px-6 py-12 sm:px-10 lg:px-16 w-full mx-auto self-center max-w-80 w-fit text-left sm:text-center ">
+      <h1 class="TTNormsPro-Bold text-4xl mt-0 sm:mt-12 md:text-5xl lg:text-6xl max-w-4xl leading-none mx-auto">
+        New generation of web development
+      </h1>
+      <p class="mt-4 text-2xl md:text-2xl lg:text-3xl  leading-relaxed TTNormsPro-Light max-w-xl mx-auto">
+        We create websites for businesses that provide great experience for
+        their users.
+      </p>
+      <a href="contact.html" class="btn-cc btn-lg mt-8 text-white bg-indigo-700 rounded-lg transform hover:scale-105 hover:bg-indigo-600 ease-in
                 duration-100
                 w-fit px-8
                 sm:mx-auto shadow-2xl">Get in touch</a>
-        </div>
-        <img src="img/mouse.svg" class="absolute bottom-0 center-y z-10" id="mouse-img" alt="">
-    </section>
+    </div>
+    <img src="img/mouse.svg" class="absolute bottom-0 center-y z-10" id="mouse-img" alt="" />
+  </section>
 
-    <section id="what-we-do" class="bg-coolGray-050  flex">
-        <div class="max-w-80 mx-auto flex flex-col px-6 sm:px-10 lg:px-16 justify-center">
-            <div class="justify-center py-16 sm:py-20 xxl:py-24">
-                <div class="flex flex-col sm:flex-row overflow-hidden">
-                    <img src="img/team.jpg"
-                        class="sm:w-1/2 sm:order-last z-10 animated FadeLeft sm:h-1/2 self-center rounded-lg" alt="">
-                    <div class="sm:pr-8  max-w-2xl sm:w-1/2 self-center z-10 animated FadeRight">
-                        <h2
-                            class="text-2xl sm:text-lg lg:text-2xl TTNormsPro-Bold max-w-md mt-8 sm:mt-0 text-coolGray-900 leading-snug">
-                            Combining modern design with science proved principles allows us to create beautiful and
-                            functional
-                            websites that bring customers to your business.
-                        </h2>
-                        <a href="studio.html" class="btn-cc mt-8 text-white rounded-lg bg-indigo-700 rounded-lg 
+  <section id="what-we-do" class="bg-coolGray-050  flex">
+    <div class="max-w-80 mx-auto flex flex-col px-6 sm:px-10 lg:px-16 justify-center">
+      <div class="justify-center py-16 sm:py-20 xxl:py-24">
+        <div class="flex flex-col sm:flex-row overflow-hidden">
+          <img src="img/team.jpg" class="sm:w-1/2 sm:order-last z-10 animated FadeLeft sm:h-1/2 self-center rounded-lg"
+            alt="" />
+          <div class="sm:pr-8  max-w-2xl sm:w-1/2 self-center z-10 animated FadeRight">
+            <h2
+              class="text-2xl sm:text-lg lg:text-2xl TTNormsPro-Bold max-w-md mt-8 sm:mt-0 text-coolGray-900 leading-snug">
+              Combining modern design with science proved principles allows us
+              to create beautiful and functional websites that bring customers
+              to your business.
+            </h2>
+            <a href="studio.html" class="btn-cc mt-8 text-white rounded-lg bg-indigo-700 rounded-lg 
                              hover:bg-indigo-600 
-                            duration-100 w-fit px-8">See
-                            more</a>
-                    </div>
-                </div>
-                <div
-                    class="flex items-center sm:justify-between flex-col sm:flex-row pt-8 text-coolGray-700 leading-relaxed">
-                    <div class="w-full sm:w-1/3 max-w-xs p-4 sm:pl-0 z-10 animated FadeUp ">
-                        <p class="before-01 "> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt soluta
-                            natus cum qui
-                            facilis
-                            repudiandae sapiente modi tempore dolores commodi!</p>
-                    </div>
-                    <div class="w-full sm:w-1/3 max-w-xs p-4 sm:px-2 z-10 animated FadeUp sm:anim-delay-05">
-                        <p class="before-02">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt soluta
-                            natus cum qui
-                            facilis
-                            repudiandae sapiente modi tempore dolores commodi!</p>
-                    </div>
-                    <div class="w-full sm:w-1/3 max-w-xs p-4 sm:pr-0 z-10 animated FadeUp sm:anim-delay-06">
-                        <p class="before-03">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt soluta
-                            natus cum qui
-                            facilis
-                            repudiandae sapiente modi tempore dolores commodi!</p>
-                    </div>
-                </div>
-            </div>
+                            duration-100 w-fit px-8">See more</a>
+          </div>
         </div>
-    </section>
+        <div class="flex items-center sm:justify-between flex-col sm:flex-row pt-8 text-coolGray-700 leading-relaxed">
+          <div class="w-full sm:w-1/3 max-w-xs p-4 sm:pl-0 z-10 animated FadeUp ">
+            <p class="before-01 ">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Nesciunt soluta natus cum qui facilis repudiandae sapiente modi
+              tempore dolores commodi!
+            </p>
+          </div>
+          <div class="w-full sm:w-1/3 max-w-xs p-4 sm:px-2 z-10 animated FadeUp sm:anim-delay-05">
+            <p class="before-02">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Nesciunt soluta natus cum qui facilis repudiandae sapiente modi
+              tempore dolores commodi!
+            </p>
+          </div>
+          <div class="w-full sm:w-1/3 max-w-xs p-4 sm:pr-0 z-10 animated FadeUp sm:anim-delay-06">
+            <p class="before-03">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Nesciunt soluta natus cum qui facilis repudiandae sapiente modi
+              tempore dolores commodi!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- <section id="why-work-with-us" class="min-h-screen bg-gray-100 px-6 sm:px-10 lg:px-16 flex ">
+  <!-- <section id="why-work-with-us" class="min-h-screen bg-gray-100 px-6 sm:px-10 lg:px-16 flex ">
         <div class=" max-w-80 mx-auto flex self-center justify-between">
             <img src="img/coding.jpg" id="why-work-with-us-img"
                 class="inline align-bottom -ml-6 sm:-ml-10 lg:-ml-16 hidden self-center md:block w-1/2 h-1/2" alt="">
@@ -145,180 +154,199 @@
 
     </section> -->
 
-    <section id="who-we-are" class="  px-6 sm:px-10 lg:px-16 bg-coolGray-800">
-        <div class=" max-w-80 mx-auto flex flex-col justify-center py-16 sm:py-20 xxl:py-24">
-            <h2 class="text-3xl TTNormsPro-Bold  pb-4 underline text-center text-indigo-100">
-                Great team is
-                the
-                key</h2>
-            <div class="flex flex-col sm:flex-row self-center text-left max-w-5xl overflow-hidden">
-                <div class="flex w-full sm:w-1/2 ">
-                    <div class="max-w-xs p-4 z-10 animated FadeRight sm:FadeUp ">
-                        <img src="img/person2.jpg" class="rounded-lg mb-4" alt="">
-                        <p class="TTNormsPro-Bold text-indigo-100">
-                            Erlends Morozo
-                        </p>
-                        <p class="text-indigo-200">
-                            Project Manager
-                        </p>
-                    </div>
-                    <div class=" max-w-xs  p-4 z-10 animated FadeLeft sm:FadeUp anim-delay-05">
-                        <img src="img/person2.jpg" class="rounded-lg mb-4" alt="">
-                        <p class="TTNormsPro-Bold text-indigo-200">
-                            Vladimir Radionovsky
-                        </p>
-                        <p class="text-indigo-200">
-                            Web developer
-                        </p>
-                    </div>
-                </div>
-                <div class="flex w-fit  w-full sm:w-1/2 ">
-                    <div class=" max-w-xs p-4 z-10 animated FadeRight sm:FadeUp anim-delay-06">
-                        <img src="img/person2.jpg" class="rounded-lg mb-4" alt="">
-                        <p class="TTNormsPro-Bold text-indigo-200">
-                            John Doe
-                        </p>
-                        <p class="text-indigo-200">
-                            Creative Director
-                        </p>
-                    </div>
-                    <div class=" max-w-xs p-4 z-10 animated FadeLeft sm:FadeUp anim-delay-07">
-                        <img src="img/person2.jpg" class="rounded-lg mb-4" alt="">
-                        <p class="TTNormsPro-Bold text-indigo-200">
-                            John Doe
-                        </p>
-                        <p class="text-indigo-200">
-                            Creative Director
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="our-portfolio" class=" bg-coolGray-100 px-6 sm:px-10 lg:px-16 py-16 sm:py-20 xxl:py-24">
-        <div class=" max-w-80 mx-auto flex flex-col text-center px-6 sm:px-10 lg:px-16 h-56">
-            <h2 class="text-4xl TTNormsPro-Bold py-8 underline text-coolGray-900">Our projects</h2>
-            <h1 class="text-3xl flex self-center TTNormsPro-Bold m-auto w-fit text-coolGray-900">Coming soon...</h1>
-
-        </div>
-    </section>
-
-    <section id="get-in-touch" class="bg-coolGray-100">
-        <div class="min-h-screen max-w-80 mx-auto flex flex-col justify-center px-6 sm:px-10 lg:px-16 ">
-            <div id="form-main-page" class=" w-full pt-12 pb-32 md:pb-40 ">
-                <form id="contact-form" class="max-w-lg mx-auto p-4 sm:p-6 shadow-lg sm:shadow-2xl rounded-lg bg-white z-10 animated
-                    FadeUp text-coolGray-800 border-coolGray-200 ">
-                    <h2 class="text-4xl TTNormsPro-Bold h-fit pb-6 underline max-w-lg mx-auto text-coolGray-900">Contact
-                        Us</h2>
-                    <div id="name-input" class="w-full  pb-2">
-                        <label class="text-left block" for="input-name">Your Name</label>
-                        <input class="w-full d-flex mb-1" type="text" placeholder="Your Name" id="input-name">
-                        <p class="text-xs text-red-600 hidden" id="input-name-p">Enter valid name</p>
-                    </div>
-                    <div id="email-input" class="w-full  pb-2">
-                        <label class="text-left block" for="input-email">Your Email</label>
-                        <input class="w-full mb-1 " type="text" placeholder="Your Email" id="input-email">
-                        <p class="text-xs text-red-600 hidden" id="input-email-p">Enter valid email</p>
-                    </div>
-                    <div id="subject-input" class=" w-full pb-2">
-                        <label class="text-left block" for="input-subject">Subject</label>
-                        <input class="w-full d-flex mb-1" type="text" placeholder="Subject" id="input-subject">
-                        <p class="text-xs text-red-600 hidden" id="input-subject-p">Enter subject</p>
-                    </div>
-                    <div id="message-input" class=" w-full pb-2">
-                        <label class="text-left block" for="input-message">Message</label>
-                        <textarea class="w-full " placeholder="Message" id="input-message"></textarea>
-                        <p class="text-xs text-red-600 hidden" id="input-message-p">Enter message</p>
-                    </div>
-                    <button id="contact-submit-btn" class="btn-skeleton bg-indigo-700 hover:bg-indigo-600 text-white w-full text-base
-                        cursor-not-allowed" type="submit">
-                        <p class="text-base" id="contact-submit-btn-text">Submit</p>
-                        <p class="text-base hidden" id="contact-submit-btn-success">Message sent</p>
-                        <p class="text-base hidden" id="contact-submit-btn-error">Error, message not sent</p>
-                        <div class="lds-ring hidden mx-auto" id="form-spinner">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </button>
-                </form>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="relative">
-        <div class="w-full absolute bottom-0">
-            <svg class="waves bg-coolGray-100" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
-                <defs>
-                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
-                </defs>
-                <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="48" fill="rgba(58,52,98,0.7" />
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(58,52,98,0.5)" />
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(58,52,98,0.3)" />
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#3A3462" />
-                </g>
-            </svg>
-        </div>
-    </section>
-
-    <section id="footer" class="bg-indigo-1000">
-        <div class="flex flex-wrap max-w-80 px-6 sm:px-10 lg:px-16  pt-16 pb-10 sm:py-24 text-white"
-            id="footer-container">
-            <div class="item w-full s flex flex-col sm:flex-row">
-                <div class="w-full sm:w-full text-4xl pb-16 sm:pb-0 TTNormsPro-Bold let-space-5">LETTEWEB</div>
-                <div class="w-full sm:w-full flex">
-                    <a href="contact.html" class="mb-auto  text-xl hover-opacity TTNormsPro-Regular ">Get
-                        in touch - Let's make it official.</a>
-                </div>
-            </div>
-            <div class="item w-full  pt-10  flex flex-col-reverse sm:flex-row">
-                <div class="w-full sm:w-full flex flex-col-reverse">
-                    <p class="h-fit mt-2 "><a class="hover-opacity" href="privacy_policy.html">Privacy
-                            Policy</a> | <a class="cursor-pointer hover-opacity btn-change-cookie-preferences">Cookie
-                            preferences</a></p>
-                    <p class="h-fit mt-auto ">© 2019, Letteweb </p>
-                </div>
-                <div class="w-full sm:w-full flex pb-12 sm:pb-0">
-                    <div class="w-1/2 lg:w-4/12">
-                        <p class="TTNormsPro-Bold text-sm mb-2">Contacts</p>
-                        <a href="mailto:work@letteweb.lv" class="block w-fit hover-opacity mb-2">Email</a>
-                        <a href="#" class="block w-fit hover-opacity">Whatsapp</a>
-                    </div>
-                    <div class="w-1/2 lg:w-4/12">
-                        <p class="TTNormsPro-Bold text-sm  mb-2">Follow us</p>
-                        <a href="#" class="block w-fit mb-2 hover-opacity">Instagram</a>
-                        <a href="#" class="block w-fit hover-opacity">Facebook</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div id="cookie-banner" class="fixed bottom-0 w-full pb-4 px-4 hidden z-50">
-        <div id="cookie-banner-container"
-            class="max-w-80 bg-indigo-200 flex rounded-lg py-4 sm:py-2 items-center flex-col sm:flex-row px-4 w-fit ">
-            <p class="h-fit text-coolGray-900">This website uses cookies to ensure you get the best experience on our
-                website. <a href="privacy_policy.html" class="text-coolGray-600 hover:text-coolGray-400 underline">
-                    Learn
-                    more</a>
+  <section id="who-we-are" class="  px-6 sm:px-10 lg:px-16 bg-coolGray-800">
+    <div class=" max-w-80 mx-auto flex flex-col justify-center py-16 sm:py-20 xxl:py-24">
+      <h2 class="text-3xl TTNormsPro-Bold  pb-4 underline text-center text-indigo-100">
+        Great team is the key
+      </h2>
+      <div class="flex flex-col sm:flex-row self-center text-left max-w-5xl overflow-hidden">
+        <div class="flex w-full sm:w-1/2 ">
+          <div class="max-w-xs p-4 z-10 animated FadeRight sm:FadeUp ">
+            <img src="img/person2.jpg" class="rounded-lg mb-4" alt="" />
+            <p class="TTNormsPro-Bold text-indigo-100">
+              Erlends Morozo
             </p>
-            <div class="sm:ml-16 flex mt-2 sm:mt-0">
-                <button id="btn-reject-cookies"
-                    class="btn-cc text-coolGray-800 hover:text-coolGray-600">Decline</button>
-                <button id="btn-allow-cookies"
-                    class="btn-cc text-white bg-indigo-700 hover:bg-indigo-600 ml-4 rounded-lg ">Allow
-                    cookies</button>
-            </div>
+            <p class="text-indigo-200">
+              Project Manager
+            </p>
+          </div>
+          <div class=" max-w-xs  p-4 z-10 animated FadeLeft sm:FadeUp anim-delay-05">
+            <img src="img/person2.jpg" class="rounded-lg mb-4" alt="" />
+            <p class="TTNormsPro-Bold text-indigo-200">
+              Vladimir Radionovsky
+            </p>
+            <p class="text-indigo-200">
+              Web developer
+            </p>
+          </div>
         </div>
+        <div class="flex w-fit  w-full sm:w-1/2 ">
+          <div class=" max-w-xs p-4 z-10 animated FadeRight sm:FadeUp anim-delay-06">
+            <img src="img/person2.jpg" class="rounded-lg mb-4" alt="" />
+            <p class="TTNormsPro-Bold text-indigo-200">
+              John Doe
+            </p>
+            <p class="text-indigo-200">
+              Creative Director
+            </p>
+          </div>
+          <div class=" max-w-xs p-4 z-10 animated FadeLeft sm:FadeUp anim-delay-07">
+            <img src="img/person2.jpg" class="rounded-lg mb-4" alt="" />
+            <p class="TTNormsPro-Bold text-indigo-200">
+              John Doe
+            </p>
+            <p class="text-indigo-200">
+              Creative Director
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
-    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-    <script src="js/app.js"></script>
+  </section>
+
+  <section id="our-portfolio" class=" bg-coolGray-100 px-6 sm:px-10 lg:px-16 py-16 sm:py-20 xxl:py-24">
+    <div class=" max-w-80 mx-auto flex flex-col text-center px-6 sm:px-10 lg:px-16 h-56">
+      <h2 class="text-4xl TTNormsPro-Bold py-8 underline text-coolGray-900">
+        Our projects
+      </h2>
+      <h1 class="text-3xl flex self-center TTNormsPro-Bold m-auto w-fit text-coolGray-900">
+        Coming soon...
+      </h1>
+    </div>
+  </section>
+
+  <section id="get-in-touch" class="bg-coolGray-100">
+    <div class="min-h-screen max-w-80 mx-auto flex flex-col justify-center px-6 sm:px-10 lg:px-16 ">
+      <div id="form-main-page" class=" w-full pt-12 pb-32 md:pb-40 ">
+        <form id="contact-form" class="max-w-lg mx-auto p-4 sm:p-6 shadow-lg sm:shadow-2xl rounded-lg bg-white z-10 animated
+                    FadeUp text-coolGray-800 border-coolGray-200 ">
+          <h2 class="text-4xl TTNormsPro-Bold h-fit pb-6 underline max-w-lg mx-auto text-coolGray-900">
+            Contact Us
+          </h2>
+          <div id="name-input" class="w-full  pb-2">
+            <label class="text-left block" for="input-name">Your Name</label>
+            <input class="w-full d-flex mb-1" type="text" placeholder="Your Name" id="input-name" />
+            <p class="text-xs text-red-600 hidden" id="input-name-p">
+              Enter valid name
+            </p>
+          </div>
+          <div id="email-input" class="w-full  pb-2">
+            <label class="text-left block" for="input-email">Your Email</label>
+            <input class="w-full mb-1 " type="text" placeholder="Your Email" id="input-email" />
+            <p class="text-xs text-red-600 hidden" id="input-email-p">
+              Enter valid email
+            </p>
+          </div>
+          <div id="subject-input" class=" w-full pb-2">
+            <label class="text-left block" for="input-subject">Subject</label>
+            <input class="w-full d-flex mb-1" type="text" placeholder="Subject" id="input-subject" />
+            <p class="text-xs text-red-600 hidden" id="input-subject-p">
+              Enter subject
+            </p>
+          </div>
+          <div id="message-input" class=" w-full pb-2">
+            <label class="text-left block" for="input-message">Message</label>
+            <textarea class="w-full " placeholder="Message" id="input-message"></textarea>
+            <p class="text-xs text-red-600 hidden" id="input-message-p">
+              Enter message
+            </p>
+          </div>
+          <button id="contact-submit-btn" class="btn-skeleton bg-indigo-700 hover:bg-indigo-600 text-white w-full text-base
+                        cursor-not-allowed" type="submit">
+            <p class="text-base" id="contact-submit-btn-text">Submit</p>
+            <p class="text-base hidden" id="contact-submit-btn-success">
+              Message sent
+            </p>
+            <p class="text-base hidden" id="contact-submit-btn-error">
+              Error, message not sent
+            </p>
+            <div class="lds-ring hidden mx-auto" id="form-spinner">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative">
+    <div class="w-full absolute bottom-0">
+      <svg class="waves bg-coolGray-100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" fill="rgba(58,52,98,0.7" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(58,52,98,0.5)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(58,52,98,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#3A3462" />
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section id="footer" class="bg-indigo-1000">
+    <div class="flex flex-wrap max-w-80 px-6 sm:px-10 lg:px-16  pt-16 pb-10 sm:py-24 text-white" id="footer-container">
+      <div class="item w-full s flex flex-col sm:flex-row">
+        <div class="w-full sm:w-full text-4xl pb-16 sm:pb-0 TTNormsPro-Bold let-space-5">
+          LETTEWEB
+        </div>
+        <div class="w-full sm:w-full flex">
+          <a href="contact.html" class="mb-auto  text-xl hover-opacity TTNormsPro-Regular ">Get in touch - Let's make it
+            official.</a>
+        </div>
+      </div>
+      <div class="item w-full  pt-10  flex flex-col-reverse sm:flex-row">
+        <div class="w-full sm:w-full flex flex-col-reverse">
+          <p class="h-fit mt-2 ">
+            <a class="hover-opacity" href="privacy_policy.html">Privacy Policy</a>
+            |
+            <a class="cursor-pointer hover-opacity btn-change-cookie-preferences">Cookie preferences</a>
+          </p>
+          <p class="h-fit mt-auto ">© 2019, Letteweb</p>
+        </div>
+        <div class="w-full sm:w-full flex pb-12 sm:pb-0">
+          <div class="w-1/2 lg:w-4/12">
+            <p class="TTNormsPro-Bold text-sm mb-2">Contacts</p>
+            <a href="mailto:work@letteweb.lv" class="block w-fit hover-opacity mb-2">Email</a>
+            <a href="#" class="block w-fit hover-opacity">Whatsapp</a>
+          </div>
+          <div class="w-1/2 lg:w-4/12">
+            <p class="TTNormsPro-Bold text-sm  mb-2">Follow us</p>
+            <a href="#" class="block w-fit mb-2 hover-opacity">Instagram</a>
+            <a href="#" class="block w-fit hover-opacity">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="cookie-banner" class="fixed bottom-0 w-full pb-4 px-4 hidden z-50">
+    <div id="cookie-banner-container"
+      class="max-w-80 bg-indigo-200 flex rounded-lg py-4 sm:py-2 items-center flex-col sm:flex-row px-4 w-fit ">
+      <p class="h-fit text-coolGray-900">
+        This website uses cookies to ensure you get the best experience on our
+        website.
+        <a href="privacy_policy.html" class="text-coolGray-600 hover:text-coolGray-400 underline">
+          Learn more</a>
+      </p>
+      <div class="sm:ml-16 flex mt-2 sm:mt-0">
+        <button id="btn-reject-cookies" class="btn-cc text-coolGray-800 hover:text-coolGray-600">
+          Decline
+        </button>
+        <button id="btn-allow-cookies" class="btn-cc text-white bg-indigo-700 hover:bg-indigo-600 ml-4 rounded-lg ">
+          Allow cookies
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
