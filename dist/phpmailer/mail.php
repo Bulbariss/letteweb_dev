@@ -1,8 +1,14 @@
 <?php
 require "PHPMailer/PHPMailerAutoload.php";
 
+$response = array( 
+    'status' => 0, 
+    'message' => 'Form submission failed, please try again.' 
+); 
+
 function smtpmailer($to, $from, $from_name, $subject, $body)
     {
+        if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['subject']) || isset($_POST['msg'])){ 
         $mail = new PHPMailer();
         $mail->IsSMTP();
         $mail->SMTPAuth = true; 
@@ -17,38 +23,45 @@ function smtpmailer($to, $from, $from_name, $subject, $body)
    //   $mail->AddAttachment($path);
    
         $mail->IsHTML(true);
-        $mail->From="send@dayosh.ru";
+        $mail->From="mail@dayosh.ru";
         $mail->FromName=$from_name;
         $mail->Sender=$from;
         $mail->AddReplyTo($from, $from_name);
-        $mail->Subject = $subject;
-        $mail->Body = $body;
+        $mail->Subject = "{$_POST['subject']}";
+        $mail->Body = "{$_POST['name']} {$_POST['msg']}";
+        $mail->AltBody = "{$_POST['msg']}";
         $mail->AddAddress($to);
         if(!$mail->Send())
         {
-            $error ="Please try Later, Error Occured while Processing...";
-            return $error; 
+            $response['message'] = 'Form data submitted successfully!'; 
         }
         else 
         {
-            $error = "Thanks You !! Your email is sent.";  
-            return $error;
+            $response['message'] = 'Form data submitted successfully!'; 
         }
     }
+    }
+    // if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['subject']) || isset($_POST['msg'])){ 
+    //     $error ="111";
+    //         return $error; 
+    // } else {
+    //      $error ="222";
+    //         return $error; 
+    // }
     
     $to   = 'alkelk@mail.ru';
-    $from = 'send@dayosh.ru';
-    $name = 'tets';
-    $subj = 'PHPMailer 5.2 testing from DomainRacer';
-    $msg = 'This is mail about testing mailing using PHP.';
-    
-    $error=smtpmailer($to,$from, $name ,$subj, $msg);
-    
-?>
+    // $from = 'send@dayosh.ru';
+    // $name = $_POST['name'];
+    // $subj = 'PHPMailer 5.2 testing from DomainRacer';
+    // $msg = 'This is mail about testing mailing using PHP.';
+    // $from = $_POST['email'];
+    // $name = $_POST['name'];
+    // $subj = $_POST['subject'];
+    // $msg = $_POST['msg'];
 
-<html>
-    <body style="background: black;">
-        <center><h2 style="padding-top:70px;color: white;"><?php echo $error; ?></h2></center>
-    </body>
     
-</html>
+    echo json_encode($response);
+    $error=smtpmailer($to,$from, $name ,$subj, $msg);
+
+    echo $myJSON;   
+?>

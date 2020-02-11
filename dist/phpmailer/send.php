@@ -33,7 +33,7 @@ function smtpmailer($to, $from, $from_name, $subject, $body)
         $mail->IsHTML(true);
         $mail->From="send@dayosh.ru";
         $mail->FromName=$from_name;
-        $mail->Sender=$from;
+        $mail->Sender= $_POST['email'];
         $mail->AddReplyTo($from, $from_name);
         $mail->Subject = $subject;
         $mail->Body = $body;
@@ -42,29 +42,29 @@ function smtpmailer($to, $from, $from_name, $subject, $body)
         {
             $error ="Please try Later, Error Occured while Processing...";
             return $error; 
+            
+            $response['message'] = 'Form data submitted successfully!'; 
         }
         else 
         {
             $error = "Thanks You !! Your email is sent.";  
             return $error;
+$response['message'] = 'Form data submitted successfully!'; 
         }
     }
     }
+
+    if(1 != 2)
+        {
+            $error ="111";
+            return $error; 
+        }
     
     $to   = 'alkelk@mail.ru';
     $from = $_POST['email'];
     $name = $_POST['name'];
     $subj = $_POST['subject'];
     $msg = $_POST['msg'];
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//   $name = test_input($_POST["name"]);
-//   $email = test_input($_POST["email"]);
-//   $website = test_input($_POST["website"]);
-//   $comment = test_input($_POST["comment"]);
-//   $gender = test_input($_POST["gender"]);
-     $msg = test_input($_POST["msg"]);
-}
 
     $error=smtpmailer($to,$from, $name ,$subj, $msg);
 

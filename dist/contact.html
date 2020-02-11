@@ -185,28 +185,43 @@
                 e.preventDefault();
                 $.ajax({
                     type: 'POST',
-                    url: 'phpmailer/send.php',
+                    url: 'phpmailer/mail.php',
                     data: new FormData(this),
                     dataType: 'json',
                     contentType: false,
                     cache: false,
                     processData: false,
-                    success: function (response) { //console.log(response);
-                        $('.statusMsg').html('');
-                        if (response.status == 1) {
-                            $('.statusMsg').html('<p class="alert alert-success">' + response.message + '</p>');
-                            console.log(response.message)
+                    success: function () {
 
-                        } else {
-                            $('.statusMsg').html('<p class="alert alert-danger">' + response.message + '</p>');
-                            console.log(response.message)
-                        }
-                        $('#fupForm').css("opacity", "");
-                        $(".submitBtn").removeAttr("disabled");
                     }
                 });
+                setTimeout(() => {
+                    console.log('!')
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            console.log(this)
+                            // var myObj = JSON.parse(this.responseText);
+                            // document.getElementById("demo").innerHTML = myObj.name;
+                        }
+                    };
+                    xmlhttp.open("GET", "phpmailer/mail.php", true);
+                    xmlhttp.send();
+                }, 4000);
             });
+
         });
+    </script>
+    <script>
+        // var xmlhttp = new XMLHttpRequest();
+        // xmlhttp.onreadystatechange = function () {
+        //     if (this.readyState == 4 && this.status == 200) {
+        //         var myObj = JSON.parse(this.responseText);
+        //         document.getElementById("demo").innerHTML = myObj.name;
+        //     }
+        // };
+        // xmlhttp.open("GET", "phpmailer/mail.php", true);
+        // xmlhttp.send();
     </script>
 </body>
 
