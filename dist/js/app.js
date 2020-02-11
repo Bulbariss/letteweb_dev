@@ -446,10 +446,6 @@ window.onload = function() {
     // const numberOfIterations = [];
     let nume = -1;
     // const letters = textWrapper.innerText.replace(/\s/g, '');
-    textWrapper.innerHTML = textWrapper.innerHTML.replace(
-      /<span class="char" data-char="(\S|)" style="--char-index:(\S*|);">(\S|)<\/span>/g,
-      '<span class="char" data-char="$1" data-value=" " style="--char-index:$2;">$3</span>'
-    );
 
     // function getNumOfIterations() {
     //   for (let i = 0; i < letters.length; i++) {
