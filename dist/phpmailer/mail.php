@@ -1,22 +1,8 @@
 <?php
 require "PHPMailer/PHPMailerAutoload.php";
 
-
-$response = array( 
-    'status' => 0, 
-    'message' => 'Form submission failed, please try again.' 
-); 
- 
-// // If form is submitted 
-// if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['file'])){ 
-//     // Get the submitted form data 
-//     $name = $_POST['name']; 
-//     $email = $_POST['email']; 
-// }
-
 function smtpmailer($to, $from, $from_name, $subject, $body)
     {
-        if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['subject']) || isset($_POST['msg'])){ 
         $mail = new PHPMailer();
         $mail->IsSMTP();
         $mail->SMTPAuth = true; 
@@ -49,26 +35,15 @@ function smtpmailer($to, $from, $from_name, $subject, $body)
             return $error;
         }
     }
-    }
     
     $to   = 'alkelk@mail.ru';
-    $from = $_POST['email'];
-    $name = $_POST['name'];
-    $subj = $_POST['subject'];
-    $msg = $_POST['msg'];
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//   $name = test_input($_POST["name"]);
-//   $email = test_input($_POST["email"]);
-//   $website = test_input($_POST["website"]);
-//   $comment = test_input($_POST["comment"]);
-//   $gender = test_input($_POST["gender"]);
-     $msg = test_input($_POST["msg"]);
-}
-
+    $from = 'send@dayosh.ru';
+    $name = 'tets';
+    $subj = 'PHPMailer 5.2 testing from DomainRacer';
+    $msg = 'This is mail about testing mailing using PHP.';
+    
     $error=smtpmailer($to,$from, $name ,$subj, $msg);
-
-    echo json_encode($response);
+    
 ?>
 
 <html>

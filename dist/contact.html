@@ -82,28 +82,27 @@
                         <div id="name-input" class="w-full  pb-2">
                             <label class="text-left block" for="input-name">Your Name</label>
                             <input class="w-full d-flex mb-1" type="text" placeholder="Your Name" id="input-name"
-                                value="<?php echo $name; ?>">
+                                name="name">
                             <p class="text-xs text-red-600 hidden" id="input-name-p">Enter valid name</p>
                         </div>
                         <div id="email-input" class="w-full  pb-2">
                             <label class="text-left block" for="input-email">Your Email</label>
                             <input class="w-full mb-1 " type="text" placeholder="Your Email" id="input-email"
-                                value="<?php echo $email; ?>">
+                                name="email">
                             <p class="text-xs text-red-600 hidden" id="input-email-p">Enter valid email</p>
                         </div>
                         <div id="subject-input" class=" w-full pb-2">
                             <label class="text-left block" for="input-subject">Subject</label>
                             <input class="w-full d-flex mb-1" type="text" placeholder="Subject" id="input-subject"
-                                value="<?php echo $subject; ?>">
+                                name="subject">
                             <p class="text-xs text-red-600 hidden" id="input-subject-p">Enter subject</p>
                         </div>
                         <div id="message-input" class=" w-full pb-2">
                             <label class="text-left block" for="input-message">Message</label>
-                            <textarea class="w-full " placeholder="Message" id="input-message"
-                                value="<?php echo $msg; ?>"></textarea>
+                            <textarea class="w-full " placeholder="Message" id="input-message" name="msg"></textarea>
                             <p class="text-xs text-red-600 hidden" id="input-message-p">Enter message</p>
                         </div>
-                        <button id="contact-submit-btn" class="btn-skeleton bg-indigo-700 hover:bg-indigo-600 text-white w-full text-base
+                        <button type="submit" id="contact-submit-btn" class="btn-skeleton bg-indigo-700 hover:bg-indigo-600 text-white w-full text-base
                         cursor-not-allowed">
                             <p class="text-base" id="contact-submit-btn-text">Submit</p>
                             <p class="text-base hidden" id="contact-submit-btn-success">Message sent</p>
@@ -115,7 +114,7 @@
                                 <div></div>
                             </div>
                         </button>
-                        <button id="btn-send-email" type="submit"></button>
+                        <button id="btn-send-email"></button>
                     </form>
                 </div>
             </div>
@@ -174,9 +173,41 @@
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <script src="js/app.js"></script>
+    <script>
+        $(document).ready(function (e) {
+            // Submit form data via Ajax
+            $("#contact-form").on('submit', function (e) {
+                console.log('!!!')
+                e.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: 'phpmailer/send.php',
+                    data: new FormData(this),
+                    dataType: 'json',
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    success: function (response) { //console.log(response);
+                        $('.statusMsg').html('');
+                        if (response.status == 1) {
+                            $('.statusMsg').html('<p class="alert alert-success">' + response.message + '</p>');
+                            console.log(response.message)
+
+                        } else {
+                            $('.statusMsg').html('<p class="alert alert-danger">' + response.message + '</p>');
+                            console.log(response.message)
+                        }
+                        $('#fupForm').css("opacity", "");
+                        $(".submitBtn").removeAttr("disabled");
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
