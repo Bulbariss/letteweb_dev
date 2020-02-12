@@ -507,11 +507,6 @@ window.onload = function() {
       targets: '.word'
     });
     // eslint-disable-next-line no-undef
-    Splitting({
-      by: 'chars',
-      whitespace: true
-    });
-    // eslint-disable-next-line no-undef
     ScrollOut({
       once: true,
       threshold: 0.2,
@@ -530,21 +525,7 @@ window.onload = function() {
       }
     });
 
-    // eslint-disable-next-line no-undef
-    ScrollOut({
-      targets: '#enable-navbar-invert',
-      onShown: function() {
-        document.getElementById('navbar').classList.remove('color-invert');
-      },
-      onHidden: function() {
-        document.getElementById('navbar').classList.add('color-invert');
-      }
-    });
     initCookies();
-    if (document.getElementById('hero')) {
-      // eslint-disable-next-line no-undef
-      // emailjs.init('user_6lWJz8Dg5i8zIDgfKxhsy');
-    }
     if (document.getElementById('particles-js')) {
       // eslint-disable-next-line no-undef
       particlesJS.load('particles-js', 'particlesjs-config.json', function() {
@@ -552,8 +533,14 @@ window.onload = function() {
       });
       setHeightOfFormContainer();
       window.addEventListener('resize', setHeightOfFormContainer);
+    }
+
+    if (document.getElementById('studio-hero')) {
       // eslint-disable-next-line no-undef
-      // emailjs.init('user_6lWJz8Dg5i8zIDgfKxhsy');
+      Splitting({
+        by: 'chars',
+        whitespace: true
+      });
     }
   })();
 };
