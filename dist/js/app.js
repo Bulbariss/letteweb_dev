@@ -206,12 +206,8 @@ window.onload = function() {
       };
       xhr.onload = function() {
         if (xhr.status === 200 && xhr.responseText === '1') {
-          console.log(xhr);
-          console.log('!');
           showSuccess();
         } else {
-          console.log('?');
-          console.log(xhr);
           showError();
         }
       };
