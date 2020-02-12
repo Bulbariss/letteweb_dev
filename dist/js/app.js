@@ -58,10 +58,8 @@ window.onload = function() {
 
   // Check if cell input is valid
   function validateName() {
-    // eslint-disable-next-line camelcase
-    const from_name = document.querySelector('#input-name').value;
-    // eslint-disable-next-line camelcase
-    if (regexName.test(from_name) || from_name === 0) {
+    const x = document.querySelector('#input-name').value;
+    if (regexName.test(x) || !x.length === 0) {
       validInput('input-name');
       name = true;
     } else {
@@ -84,9 +82,8 @@ window.onload = function() {
 
   // Check if cell input is valid
   function validateSubject() {
-    // eslint-disable-next-line no-shadow
-    const validateSubject = document.querySelector('#input-subject').value;
-    if (!validateSubject.length === 0 || validateSubject.trim()) {
+    const x = document.querySelector('#input-subject').value;
+    if (!x.length === 0 || x.trim()) {
       validInput('input-subject');
       subject = true;
     } else {
@@ -97,9 +94,8 @@ window.onload = function() {
 
   // Check if cell input is valid
   function validateMessage() {
-    // eslint-disable-next-line camelcase
-    const message_html = document.querySelector('#input-message').value;
-    if (!message_html.length === 0 || message_html.trim()) {
+    const x = document.querySelector('#input-message').value;
+    if (!x.length === 0 || x.trim()) {
       validInput('input-message');
       message = true;
     } else {
@@ -200,42 +196,32 @@ window.onload = function() {
 
     // Send email if everything is valid
     if (name && email && subject && message) {
-      const data = {
-        service_id: 'default_service',
-        template_id: 'template_GUD945DV',
-        user_id: 'user_6lWJz8Dg5i8zIDgfKxhsy',
-        template_params: {
-          // "from_name": '12',
-          from_name: IDs.nameID.value,
-          // "email": '12',
-          email: IDs.emailID.value,
-          // "subject": '12',
-          subject: IDs.subjectID.value,
-          found_out: '12',
-          message_html: IDs.messageID.value
-          // "message_html": '12'
-        }
-      };
       // add spinner
       document
         .getElementById('contact-submit-btn-text')
         .classList.add('hidden');
       document.getElementById('form-spinner').classList.add('block-imp');
-      // eslint-disable-next-line no-undef
-      emailjs
-        .send(data.service_id, data.template_id, data.template_params)
-        .then(
-          function() {
-            showSuccess();
-          },
-          function(error) {
-            showError();
-            // eslint-disable-next-line no-alert
-            alert(
-              `Send email failed!\r\n Response:\n ${JSON.stringify(error)}`
-            );
-          }
-        );
+
+      const data = `name=${IDs.nameID.value}&email=${IDs.emailID.value}&subject=${IDs.subjectID.value}&msg=${IDs.messageID.value}`;
+
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', 'mail/send.php');
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhr.onerror = function() {
+        console.log(xhr);
+      };
+      xhr.onload = function() {
+        if (xhr.status === 200 && xhr.responseText !== data) {
+          console.log(xhr.responseText);
+          showSuccess();
+        } else if (xhr.status !== 200) {
+          console.log(xhr.responseText);
+          showError();
+        } else {
+          console.log(xhr);
+        }
+      };
+      xhr.send(data);
     }
   }
 
@@ -567,7 +553,7 @@ window.onload = function() {
     initCookies();
     if (document.getElementById('hero')) {
       // eslint-disable-next-line no-undef
-      emailjs.init('user_6lWJz8Dg5i8zIDgfKxhsy');
+      // emailjs.init('user_6lWJz8Dg5i8zIDgfKxhsy');
     }
     if (document.getElementById('particles-js')) {
       // eslint-disable-next-line no-undef
@@ -577,7 +563,7 @@ window.onload = function() {
       setHeightOfFormContainer();
       window.addEventListener('resize', setHeightOfFormContainer);
       // eslint-disable-next-line no-undef
-      emailjs.init('user_6lWJz8Dg5i8zIDgfKxhsy');
+      // emailjs.init('user_6lWJz8Dg5i8zIDgfKxhsy');
     }
   })();
 };
