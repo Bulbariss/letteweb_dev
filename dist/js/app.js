@@ -509,6 +509,11 @@ window.onload = function() {
   // Load images after page was fully loaded
   function loadImagesAfterPageLoad() {
     let lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
+    const lazyBackgrounds = [].slice.call(document.querySelectorAll('.lazyBg'));
+
+    lazyBackgrounds.forEach(function(lazyBackground) {
+      lazyBackground.classList.add('loaded');
+    });
 
     lazyImages.forEach(function(lazyImage) {
       console.log('!');
@@ -522,7 +527,6 @@ window.onload = function() {
         return image !== lazyImage;
       });
     });
-    // });
   }
 
   (function() {
