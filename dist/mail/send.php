@@ -1,10 +1,7 @@
 <?php
 require "PHPMailer/PHPMailerAutoload.php";
 
-$response = array( 
-    'status' => 0, 
-    'message' => 'Form submission failed, please try again.' 
-); 
+$response = 0; 
 
 if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['subject']) || isset($_POST['msg'])){ 
     
@@ -31,18 +28,12 @@ if(isset($_POST['name']) || isset($_POST['email']) || isset($_POST['subject']) |
     if(!$mail->Send())
     {
         global $response;
-        $response = array( 
-            'status' => 0, 
-            'message' => 'Form submission failed, please try again.' 
-        ); 
+        $response = 2;
     }
     else 
     {
         global $response;
-        $response = array( 
-            'status' => 1, 
-            'message' => 'Form data submitted successfully!' 
-        ); 
+        $response = 1;
                     
     }
 }    

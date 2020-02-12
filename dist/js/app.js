@@ -106,6 +106,9 @@ window.onload = function() {
 
   // Show success message
   function showSuccess() {
+    document
+      .getElementById('contact-submit-btn-text')
+      .classList.remove('hidden');
     document.getElementById('contact-submit-btn').classList.add('bg-green-500');
     document
       .getElementById('contact-submit-btn')
@@ -117,13 +120,10 @@ window.onload = function() {
     document.getElementById('contact-submit-btn').disabled = true;
     document.getElementById('form-spinner').classList.remove('block-imp');
     document.getElementById('form-spinner').classList.add('hidden');
-    document
-      .getElementById('contact-submit-btn-success')
-      .classList.add('block-imp');
+    document.getElementById('contact-submit-btn-text').innerText =
+      'Message Sent';
     setTimeout(() => {
-      document
-        .getElementById('contact-submit-btn-success')
-        .classList.remove('block-imp');
+      document.getElementById('contact-submit-btn-text').innerText = 'Submit';
       document
         .getElementById('contact-submit-btn')
         .classList.add('bg-indigo-700');
@@ -133,9 +133,6 @@ window.onload = function() {
       document
         .getElementById('contact-submit-btn')
         .classList.remove('select-none');
-      document
-        .getElementById('contact-submit-btn-text')
-        .classList.remove('hidden');
       document
         .getElementById('contact-submit-btn')
         .classList.remove('pointer-events-none');
@@ -148,6 +145,9 @@ window.onload = function() {
   // Show error message
   function showError() {
     // show failure
+    document
+      .getElementById('contact-submit-btn-text')
+      .classList.remove('hidden');
     document.getElementById('contact-submit-btn').classList.add('bg-red-500');
     document
       .getElementById('contact-submit-btn')
@@ -159,13 +159,10 @@ window.onload = function() {
     document.getElementById('contact-submit-btn').disabled = true;
     document.getElementById('form-spinner').classList.remove('block-imp');
     document.getElementById('form-spinner').classList.add('hidden');
-    document
-      .getElementById('contact-submit-btn-error')
-      .classList.add('block-imp');
+    document.getElementById('contact-submit-btn-text').innerText =
+      'Error, message not sent';
     setTimeout(() => {
-      document
-        .getElementById('contact-submit-btn-error')
-        .classList.remove('block-imp');
+      document.getElementById('contact-submit-btn-text').innerText = 'Submit';
       document
         .getElementById('contact-submit-btn')
         .classList.add('bg-indigo-700');
@@ -175,9 +172,6 @@ window.onload = function() {
       document
         .getElementById('contact-submit-btn')
         .classList.remove('select-none');
-      document
-        .getElementById('contact-submit-btn-text')
-        .classList.remove('hidden');
       document
         .getElementById('contact-submit-btn')
         .classList.remove('pointer-events-none');
@@ -208,17 +202,17 @@ window.onload = function() {
       xhr.open('POST', 'mail/send.php');
       xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
       xhr.onerror = function() {
-        console.log(xhr);
+        showError();
       };
       xhr.onload = function() {
-        if (xhr.status === 200 && xhr.responseText !== data) {
-          console.log(xhr.responseText);
-          showSuccess();
-        } else if (xhr.status !== 200) {
-          console.log(xhr.responseText);
-          showError();
-        } else {
+        if (xhr.status === 200 && xhr.responseText === '1') {
           console.log(xhr);
+          console.log('!');
+          showSuccess();
+        } else {
+          console.log('?');
+          console.log(xhr);
+          showError();
         }
       };
       xhr.send(data);
