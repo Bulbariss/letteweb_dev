@@ -493,14 +493,40 @@ window.onload = function() {
     // getNumOfIterations();
     // getFinalStrings();
     prepareToIterate();
+
     setTimeout(() => {
       setInterval(swapText, 60);
     }, 100);
+
+    // function testq() {
+    //    setInterval(swapText, 60);
+    // }
+    // window.requestAnimationFrame(testq);
   }
 
   // Mooving letters
 
+  // Load images after page was fully loaded
+  function loadImagesAfterPageLoad() {
+    let lazyImages = [].slice.call(document.querySelectorAll('img.lazy'));
+
+    lazyImages.forEach(function(lazyImage) {
+      console.log('!');
+      // eslint-disable-next-line
+      lazyImage.src = lazyImage.dataset.src;
+      // eslint-disable-next-line
+      lazyImage.srcset = lazyImage.dataset.srcset;
+      lazyImage.classList.remove('lazy');
+
+      lazyImages = lazyImages.filter(function(image) {
+        return image !== lazyImage;
+      });
+    });
+    // });
+  }
+
   (function() {
+    loadImagesAfterPageLoad();
     // eslint-disable-next-line no-undef
     ScrollOut({
       once: false,
