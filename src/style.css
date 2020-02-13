@@ -51,13 +51,6 @@ textarea::-webkit-input-placeholder {
   text-shadow: none;
 }
 
-/* @font-face {
-    font-family: 'Gilroy ExtraBold';
-    src: url('../fonts/Gilroy_ExtraBold.woff2') format('woff2'),
-        url('../fonts/Gilroy_ExtraBold.woff') format('woff'),
-        url('../fonts/Gilroy_ExtraBold.ttf') format('truetype');
-} */
-
 /* font-weight 500 */
 @font-face {
   font-family: 'TTNormsPro-Regular';
