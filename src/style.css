@@ -650,17 +650,6 @@ textarea::-webkit-input-placeholder {
     background-size: cover;
 } */
 
-#blob-top {
-  height: 70vh;
-  min-height: 300px;
-}
-
-#blob-bottom {
-  height: 80vh;
-  bottom: -20%;
-  min-height: 300px;
-}
-
 /* IDs */
 
 /* Animation */

@@ -516,7 +516,6 @@ window.onload = function() {
     });
 
     lazyImages.forEach(function(lazyImage) {
-      console.log('!');
       // eslint-disable-next-line
       lazyImage.src = lazyImage.dataset.src;
       // eslint-disable-next-line
