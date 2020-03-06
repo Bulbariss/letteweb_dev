@@ -59,6 +59,7 @@ textarea::-webkit-input-placeholder {
     url('../fonts/3AC130_2_0.woff2') format('woff2'),
     url('../fonts/3AC130_2_0.woff') format('woff'),
     url('../fonts/3AC130_2_0.ttf') format('truetype');
+  font-display: swap;
 }
 
 /* font-weight 400 */
@@ -69,6 +70,7 @@ textarea::-webkit-input-placeholder {
     url('../fonts/3AC130_3_0.woff2') format('woff2'),
     url('../fonts/3AC130_3_0.woff') format('woff'),
     url('../fonts/3AC130_3_0.ttf') format('truetype');
+  font-display: swap;
 }
 
 /* font-weight 700 */
@@ -79,6 +81,7 @@ textarea::-webkit-input-placeholder {
     url('../fonts/3AC130_12_0.woff2') format('woff2'),
     url('../fonts/3AC130_12_0.woff') format('woff'),
     url('../fonts/3AC130_12_0.ttf') format('truetype');
+  font-display: swap;
 }
 
 /* font-weight 600 */
@@ -89,6 +92,7 @@ textarea::-webkit-input-placeholder {
     url('../fonts/3AC130_E_0.woff2') format('woff2'),
     url('../fonts/3AC130_E_0.woff') format('woff'),
     url('../fonts/3AC130_E_0.ttf') format('truetype');
+  font-display: swap;
 }
 
 /* font-weight 200 */
@@ -99,6 +103,7 @@ textarea::-webkit-input-placeholder {
     url('../fonts/3AC130_5_0.woff2') format('woff2'),
     url('../fonts/3AC130_5_0.woff') format('woff'),
     url('../fonts/3AC130_5_0.ttf') format('truetype');
+  font-display: swap;
 }
 
 /* font-weight 300 */
@@ -109,6 +114,7 @@ textarea::-webkit-input-placeholder {
     url('../fonts/3AC130_6_0.woff2') format('woff2'),
     url('../fonts/3AC130_6_0.woff') format('woff'),
     url('../fonts/3AC130_6_0.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
@@ -118,6 +124,7 @@ textarea::-webkit-input-placeholder {
     url('../fonts/3AC130_8_0.woff2') format('woff2'),
     url('../fonts/3AC130_8_0.woff') format('woff'),
     url('../fonts/3AC130_8_0.ttf') format('truetype');
+  font-display: swap;
 }
 
 /* Classes */
