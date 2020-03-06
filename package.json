@@ -10,16 +10,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.0.6",
+    "@fullhuman/postcss-purgecss": "^2.1.0",
     "autoprefixer": "^9.7.4",
     "cssnano": "^4.1.10",
-    "postcss": "^7.0.26",
-    "scroll-out": "^2.2.7",
+    "postcss": "^7.0.27",
+    "scroll-out": "^2.2.8",
     "splitting": "^1.0.6",
     "tailwindcss": "^1.2.0"
   },
   "devDependencies": {
-    "eslint": "^6.1.0",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-node": "^4.0.0",
     "eslint-config-prettier": "^6.10.0",
